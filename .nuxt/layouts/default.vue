@@ -34,5 +34,3 @@
     <Nuxt />
   </div>
 </template>
-
-<style src="./default.css"></style>
