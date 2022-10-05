@@ -1,4 +1,4 @@
-export { default as FormAnimale } from '../..\\components\\form-animale.vue'
+export { default as AnimalForm } from '../..\\components\\animal-form.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
