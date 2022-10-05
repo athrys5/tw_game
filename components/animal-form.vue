@@ -2,8 +2,7 @@
     <div class="app"> 
         <section class="create-todo">
             <h4>DESCRIBE YOUR ANIMAL</h4>
-            <form id="new-todo-form" @submit.prevent="addTodo">
-                <h4>What's on your todo list?</h4>
+            <form id="new-todo-form" @submit.prevent="additem">
                 <input 
                     type="text" 
                     name="AnimalName" 
@@ -28,25 +27,25 @@
                     id="content" 
                     placeholder="e.g. make a video"
                     v-model="inputAnimalAge" />
-                <input type="submit" value="Add todo"/>
+                <input type="submit" value="Add item"/>
             </form>
         </section>
         <section class="todo-list">
             <h3>I TUOI ANIMALI</h3>
-            <div class="list" id="todo-list">
-                <div v-for="todo in todosAsc" :key=todo-item>
+            <div class="todo" id="todo-list">
+                <div v-for="item in itemsAsc" :key=item-item>
                     <div class="todo-content">
                         <b-card
-                            :header=todo.AnimalName
+                            :header=item.AnimalName
                             header-text-variant="white"
                             header-tag="header"
                             header-bg-variant="dark"
                             style="max-width: 20rem;"
                         >
-                            <input type="text" v-model="todo.AnimalType"/>
-                            <input type="text" v-model="todo.AnimalRace"/>
-                            <input type="text" v-model="todo.AnimalAge"/>
-                            <b-button variant="primary" @click="removeTodo(todo)">Delete</b-button>
+                            <input type="text" v-model="item.AnimalType"/>
+                            <input type="text" v-model="item.AnimalRace"/>
+                            <input type="text" v-model="item.AnimalAge"/>
+                            <b-button variant="primary" @click="removeitem(item)">Delete</b-button>
                         </b-card>
                     </div>
                 </div>
@@ -57,24 +56,24 @@
 
 <script setup>
     import { ref, onMounted, watch, computed } from 'vue'
-    const todos = ref([])
+    const items = ref([])
     const inputAnimalName = ref('')
     const inputAnimalType = ref('')
     const inputAnimalRace = ref('')
     const inputAnimalAge = ref('')
-    const todosAsc = computed(() => todos.value.slice(0).sort((a,b) =>{
+    const itemsAsc = computed(() => items.value.slice(0).sort((a,b) =>{
 	    return a.createdAt - b.createdAt
     })) 
-    watch(todos, (newVal) => {
-        localStorage.setItem('todos', JSON.stringify(newVal))
+    watch(items, (newVal) => {
+        localStorage.setItem('items', JSON.stringify(newVal))
     }, {
         deep: true
     })
-    const addTodo = () => {
+    const additem = () => {
         if (inputAnimalName.value.trim() === '') {
             return
         }
-        todos.value.push({
+        items.value.push({
             AnimalName: inputAnimalName.value,
             AnimalType: inputAnimalType.value,
             AnimalRace: inputAnimalRace.value,
@@ -82,11 +81,12 @@
             editable: false,
         })
     }
-    const removeTodo = (todo) => {
-        todos.value = todos.value.filter((t) => t !== todo)
+    const removeitem = (item) => {
+        items.value = items.value.filter((t) => t !== item)
     }
     onMounted(() => {
-        todos.value = JSON.parse(localStorage.getItem('todos')) || []
+        items.value = JSON.parse(localStorage.getItem('items')) || []
+
     })
 </script>
 
