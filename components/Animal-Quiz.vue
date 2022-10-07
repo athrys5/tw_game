@@ -5,6 +5,7 @@
         </b-form-group>
        <p>{{animalforquiz[listofparameters[randparam]]}}</p>
        <button v-on:click="checkAnswer">Verifica</button>
+       <p :v-model="score">{{score}}</p>
     </div>
 </template>
 
