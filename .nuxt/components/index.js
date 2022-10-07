@@ -1,4 +1,4 @@
-
+export { default as CuriositaAnimali } from '../..\\components\\Curiosita-Animali.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
