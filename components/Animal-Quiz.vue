@@ -57,7 +57,7 @@
                     console.log(error);
                 });
             },
-            checkAnswer(){
+            checkAnswer(){ // disabilita bottone dopo primo click 
                 const radio = document.getElementsByName('some-radios');
                 for(let i=0; i<radio.length; i++){
                     if(radio[i].checked){
