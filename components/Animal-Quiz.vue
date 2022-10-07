@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-form-group  :label="'Which is '+ animalforquiz.name + ' ' + listofparameters2[randparam]" v-slot="{ ariaDescribedby }">
-            <b-form-radio v-for="item in fieldsforquiz" :key="item.index" :aria-describedby="ariaDescribedby" name="some-radios" :value=item>{{item}}</b-form-radio>
+            <b-form-radio v-for="item in repliesize" :key="item.index" :aria-describedby="ariaDescribedby" name="some-radios" :value=item>{{item}}</b-form-radio>
         </b-form-group>
        <p>{{animalforquiz[listofparameters[randparam]]}}</p>
        <button v-on:click="checkAnswer">Verifica</button>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+
     const axios = require("axios");
     export default {
         data(){
@@ -20,6 +21,7 @@
                 list: [],
                 animalforquiz: [],
                 fieldsforquiz: [],
+                repliesize: [],
                 listofparameters: ["latin_name", "length_min", "length_max", "weight_min", "weight_max", "lifespan", "habitat", "diet", "geo_range"],
                 listofparameters2: ["latin name", "minimum length (in meters)", "maximum length (in meters)", "minimum weight (in kilos)", "maximum weight (in kilos)", "lifespan", "habitat", "diet", "geo range"],
             }
@@ -45,12 +47,11 @@
                     }
                     const prova = [...new Set(this.fieldsforquiz)];
                     this.fieldsforquiz = Array.from(prova);
-                    if(typeof this.fieldsforquiz[0]=== 'string'){
-                        this.fieldsforquiz.sort(function(a, b){return a>b;});
-                    }else if(typeof this.fieldsforquiz[0]=== 'number'){
-                        this.fieldsforquiz.sort(function(a, b){return a-b;});
+                    this.repliesize.push(this.fieldsforquiz[0]);
+                    for(let j=1; j<3; j++){
+                        this.repliesize.push(this.fieldsforquiz[j]);
                     }
-                    
+                    this.repliesize.sort(function(){return 0.5 - Math.random()});
                 }).catch(function (error) {
                     console.log(error);
                 });
