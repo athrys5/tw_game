@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Curiosita-Animali />
+    <Animal-Quiz />
   </div>
 </template>
 
