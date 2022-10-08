@@ -1,9 +1,9 @@
 <template>
     <div class="app">
-        <section class="quiz">
+        <section class="quiz" v-if="!quizfinished">
             <div class="quiz-info">
                 <span class="question">Which is {{animalforquiz.name}} {{listofparameters2[randparam]}}</span>
-                <span class="score" :v-model="score">Score {{score}}/</span>
+                <span class="score" :v-model="score">Score {{score}}/{{questionnumber}}</span>
             </div>
             <div class="options">
                 <label v-for="item in repliesize" :key="item.index" class="option">
@@ -15,10 +15,15 @@
 					/>
                     {{item}}
                 </label>
-            <p>{{animalforquiz[listofparameters[randparam]]}}</p>
-            <button v-on:click="checkAnswer" :disabled="!control">Verifica</button>
+            <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
+            <button v-on:click="checkAnswer" :disabled="!control">Next Question</button>
             </div>
        </section>
+       <section v-else class="showscore">
+			<h2>You have finished the quiz!</h2>
+			<p>Your score is {{score}}/{{questionnumber}}</p>
+            <button v-on:click="repeatQuiz">Repeat the Quiz</button>
+		</section>
     </div>
 </template>
 
@@ -33,6 +38,9 @@
                 randanimal: 0,
                 answer: " ",
                 score: 0,
+                quizfinished: false,
+                questionnumber: 3, 
+                checkquestions: 0,
                 list: [],
                 control: false,
                 animalforquiz: [],
@@ -65,6 +73,7 @@
                 });
             },
             checkAnswer(){
+                this.checkquestions = this.checkquestions + 1;
                 this.control = false;
                 const radio = document.getElementsByName('some-radios');
                 for(let i=0; i<radio.length; i++){
@@ -78,7 +87,12 @@
                 }else {
                     console.log("errato");
                 }
-                this.getCuriosity();
+                if(this.checkquestions === this.questionnumber){
+                    this.checkquestions = 0;
+                    this.quizfinished = true;
+                }else {
+                    this.getCuriosity();
+                }
             },
             prepareQuiz(){
                 this.fieldsforquiz.push(this.animalforquiz[this.listofparameters[this.randparam]]);
@@ -100,6 +114,10 @@
                     this.repliesize.sort(function(){return 0.5 - Math.random()});
                 }
             },
+            repeatQuiz(){
+                this.quizfinished = false;
+                this.score = 0;
+            }
         },
         mounted() {
             this.getCuriosity();
