@@ -1,13 +1,28 @@
 <template>
-    <div>
-        <b-form-group  :label="'Which is '+ animalforquiz.name + ' ' + listofparameters2[randparam]" v-slot="{ ariaDescribedby }">
-            <b-form-radio v-for="item in repliesize" :key="item.index" v-model="control" :aria-describedby="ariaDescribedby" name="some-radios" :value=item>{{item}}</b-form-radio>
-        </b-form-group>
-       <p>{{animalforquiz[listofparameters[randparam]]}}</p>
-       <button v-on:click="checkAnswer" :disabled="!control">Verifica</button>
-       <p :v-model="score">{{score}}</p>
+    <div class="app">
+        <section class="quiz">
+            <div class="quiz-info">
+                <span class="question">Which is {{animalforquiz.name}} {{listofparameters2[randparam]}}</span>
+                <span class="score" :v-model="score">Score {{score}}/</span>
+            </div>
+            <div class="options">
+                <label v-for="item in repliesize" :key="item.index" class="option">
+                      <input 
+						type="radio" 
+						name="some-radios" 
+						:value=item
+						v-model="control" 
+					/>
+                    {{item}}
+                </label>
+            <p>{{animalforquiz[listofparameters[randparam]]}}</p>
+            <button v-on:click="checkAnswer" :disabled="!control">Verifica</button>
+            </div>
+       </section>
     </div>
 </template>
+
+<style src="./Animal-Quiz.css"></style>
 
 <script>
     const axios = require("axios");
@@ -49,7 +64,7 @@
                     console.log(error);
                 });
             },
-            checkAnswer(){ 
+            checkAnswer(){
                 this.control = false;
                 const radio = document.getElementsByName('some-radios');
                 for(let i=0; i<radio.length; i++){
@@ -73,13 +88,17 @@
                         this.fieldsforquiz.push(par[i][this.listofparameters[this.randparam]]);
                     }
                 }
-                const prova = [...new Set(this.fieldsforquiz)];
-                this.fieldsforquiz = Array.from(prova);
-                this.repliesize.push(this.fieldsforquiz[0]);
-                for(let j=1; j<3; j++){
-                    this.repliesize.push(this.fieldsforquiz[j]);
+                if(this.fieldsforquiz.length <3){
+                    this.getCuriosity();
+                }else{
+                    const prova = [...new Set(this.fieldsforquiz)];
+                    this.fieldsforquiz = Array.from(prova);
+                    this.repliesize.push(this.fieldsforquiz[0]);
+                    for(let j=1; j<3; j++){
+                        this.repliesize.push(this.fieldsforquiz[j]);
+                    }
+                    this.repliesize.sort(function(){return 0.5 - Math.random()});
                 }
-                this.repliesize.sort(function(){return 0.5 - Math.random()});
             },
         },
         mounted() {
