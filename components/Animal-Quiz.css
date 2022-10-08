@@ -97,3 +97,15 @@ p {
 .showscore {
     text-align: center;
 }
+
+#selected {
+    background-color: cornflowerblue;
+}
+
+#correct {
+    background-color: green;
+}
+
+#incorrect {
+    background-color: red;
+}

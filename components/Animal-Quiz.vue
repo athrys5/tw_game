@@ -6,8 +6,14 @@
                 <span class="score" :v-model="score">Score {{score}}/{{questionnumber}}</span>
             </div>
             <div class="options">
-                <label v-for="item in repliesize" :key="item.index" class="option">
-                      <input 
+                <label 
+                    v-for="(item, index) in repliesize" 
+                    :key="index" 
+                    class="option"
+                    @click="selectAnswer(index)"
+                    :id="answerClass(index)"
+                >
+                    <input 
 						type="radio" 
 						name="some-radios" 
 						:value=item
@@ -16,7 +22,9 @@
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
-            <button v-on:click="checkAnswer" :disabled="!control">Next Question</button>
+            <p>{{animalforquiz[listofparameters[randparam]]}}</p>
+            <button v-on:click="checkAnswer" :disabled="!control" v-if="submitbutton">Submit</button>
+            <button v-on:click="getCuriosity" v-if="!submitbutton">Next Question</button>
             </div>
        </section>
        <section v-else class="showscore">
@@ -37,8 +45,12 @@
                 randparam: 0,
                 randanimal: 0,
                 answer: " ",
+                answered: false,
+                submitbutton: true, 
                 score: 0,
                 quizfinished: false,
+                selectedIndex: null,
+                correctIndex: null,
                 questionnumber: 3, 
                 checkquestions: 0,
                 list: [],
@@ -52,6 +64,10 @@
         },
         methods:{
             getCuriosity(){
+                this.answered = false;
+                this.submitbutton = true;
+                this.selectedIndex = null;
+                this.correctIndex = null;
                 this.list = [];
                 this.animalforquiz = [];
                 this.fieldsforquiz = [];
@@ -73,26 +89,20 @@
                 });
             },
             checkAnswer(){
+                this.submitbutton = false;
                 this.checkquestions = this.checkquestions + 1;
                 this.control = false;
-                const radio = document.getElementsByName('some-radios');
-                for(let i=0; i<radio.length; i++){
-                    if(radio[i].checked){
-                        this.answer = radio[i].value;
-                    }
-                }
-                if(this.answer === this.animalforquiz[this.listofparameters[this.randparam]]){
-                    console.log("corretto");
+                this.answered = true;
+                if(this.selectedIndex === this.correctIndex){
                     this.score = this.score + 1;
-                }else {
-                    console.log("errato");
                 }
                 if(this.checkquestions === this.questionnumber){
                     this.checkquestions = 0;
                     this.quizfinished = true;
-                }else {
+                    this.answered = false;
+                } /* else {
                     this.getCuriosity();
-                }
+                } */
             },
             prepareQuiz(){
                 this.fieldsforquiz.push(this.animalforquiz[this.listofparameters[this.randparam]]);
@@ -112,11 +122,30 @@
                         this.repliesize.push(this.fieldsforquiz[j]);
                     }
                     this.repliesize.sort(function(){return 0.5 - Math.random()});
+                    this.correctIndex = this.repliesize.findIndex(this.findCorrectIndex)
                 }
             },
             repeatQuiz(){
                 this.quizfinished = false;
                 this.score = 0;
+                this.selectedIndex = null;
+            },
+            selectAnswer(index){
+                this.selectedIndex = index;
+            },
+            answerClass(index){
+                let answerClass = "";
+                if(!this.answered && this.selectedIndex === index){
+                    answerClass = 'selected';
+                }else if(this.answered && this.correctIndex === index){
+                    answerClass = "correct";
+                }else if(this.selectedIndex === index && this.correctIndex !== index){
+                    answerClass = "incorrect";
+                }
+                return answerClass;
+            },
+            findCorrectIndex(field){
+                return field === this.animalforquiz[this.listofparameters[this.randparam]];
             }
         },
         mounted() {
