@@ -64,29 +64,35 @@
         },
         methods:{
             getCuriosity(){
-                this.answered = false;
-                this.submitbutton = true;
-                this.selectedIndex = null;
-                this.correctIndex = null;
-                this.list = [];
-                this.animalforquiz = [];
-                this.fieldsforquiz = [];
-                this.repliesize = [];
-                this.answer = " ";
-                this.randparam = Math.floor(Math.random()*(8-0+1))+0;
-                this.randanimal= Math.floor(Math.random()*(9-0+1))+0;
-                this.list = [];
-                axios.request({
-                    method: 'GET',
-                    url: 'https://zoo-animal-api.herokuapp.com/animals/rand/10',
-                })
-                .then( (response) => {
-                    this.list = response.data;
-                    this.animalforquiz = this.list[this.randanimal];
-                    this.prepareQuiz();
-                }).catch(function (error) {
-                    console.log(error);
-                });
+                if(this.checkquestions === this.questionnumber){
+                    this.checkquestions = 0;
+                    this.quizfinished = true;
+                    this.answered = false;
+                } else {
+                    this.answered = false;
+                    this.submitbutton = true;
+                    this.selectedIndex = null;
+                    this.correctIndex = null;
+                    this.list = [];
+                    this.animalforquiz = [];
+                    this.fieldsforquiz = [];
+                    this.repliesize = [];
+                    this.answer = " ";
+                    this.randparam = Math.floor(Math.random()*(8-0+1))+0;
+                    this.randanimal= Math.floor(Math.random()*(9-0+1))+0;
+                    this.list = [];
+                    axios.request({
+                        method: 'GET',
+                        url: 'https://zoo-animal-api.herokuapp.com/animals/rand/10',
+                    })
+                    .then( (response) => {
+                        this.list = response.data;
+                        this.animalforquiz = this.list[this.randanimal];
+                        this.prepareQuiz();
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+                }
             },
             checkAnswer(){
                 this.submitbutton = false;
@@ -96,11 +102,7 @@
                 if(this.selectedIndex === this.correctIndex){
                     this.score = this.score + 1;
                 }
-                if(this.checkquestions === this.questionnumber){
-                    this.checkquestions = 0;
-                    this.quizfinished = true;
-                    this.answered = false;
-                } /* else {
+                 /* else {
                     this.getCuriosity();
                 } */
             },
@@ -129,6 +131,7 @@
                 this.quizfinished = false;
                 this.score = 0;
                 this.selectedIndex = null;
+                this.getCuriosity();
             },
             selectAnswer(index){
                 this.selectedIndex = index;
