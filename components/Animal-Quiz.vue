@@ -10,7 +10,7 @@
                     :key="index" 
                     class="option"
                     @click="selectAnswer(index)"
-                    :id="answerClass(index)"
+                    :id="answerId(index)"
                 >
                     <input 
 						type="radio" 
@@ -23,12 +23,12 @@
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
             <p>{{animalforquiz[listofparameters[randparam]]}}</p>
             <button v-on:click="checkAnswer" :disabled="!control" v-if="submitbutton">Submit</button>
-            <button v-on:click="getCuriosity" v-if="!submitbutton">Next Question</button>
+            <button v-on:click="getCuriosity" v-if="!submitbutton">{{labelbutton}}</button>
             </div>
        </section>
        <section v-else class="showscore">
 			<h2>You have finished the quiz!</h2>
-			<p>Your score is {{score}}/{{questionnumber}}</p>
+			<p>Your score is {{score}}</p>
             <button v-on:click="repeatQuiz">Repeat the Quiz</button>
 		</section>
     </div>
@@ -47,11 +47,11 @@
                 answered: false,
                 submitbutton: true, 
                 score: 0,
+                labelbutton: "Next Question",
+                incorrect: false,
                 quizfinished: false,
                 selectedIndex: null,
                 correctIndex: null,
-                questionnumber: 3, 
-                checkquestions: 0,
                 list: [],
                 control: false,
                 animalforquiz: [],
@@ -63,10 +63,10 @@
         },
         methods:{
             getCuriosity(){
-                if(this.checkquestions === this.questionnumber){
-                    this.checkquestions = 0;
+                if(this.incorrect){
                     this.quizfinished = true;
                     this.answered = false;
+                    this.incorrect = false;
                 } else {
                     this.answered = false;
                     this.submitbutton = true;
@@ -100,6 +100,9 @@
                 this.answered = true;
                 if(this.selectedIndex === this.correctIndex){
                     this.score = this.score + 1;
+                } else {
+                    this.incorrect = true;
+                    this.labelbutton = "Show Results";
                 }
             },
             prepareQuiz(){
@@ -132,7 +135,7 @@
             selectAnswer(index){
                 this.selectedIndex = index;
             },
-            answerClass(index){
+            answerId(index){
                 let answerClass = "";
                 if(!this.answered && this.selectedIndex === index){
                     answerClass = 'selected';
