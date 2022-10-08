@@ -21,7 +21,6 @@
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
-            <p>{{animalforquiz[listofparameters[randparam]]}}</p>
             <button v-on:click="checkAnswer" :disabled="!control" v-if="submitbutton">Submit</button>
             <button v-on:click="getCuriosity" v-if="!submitbutton">{{labelbutton}}</button>
             </div>
