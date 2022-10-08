@@ -1,10 +1,10 @@
 <template>
     <div>
         <b-form-group  :label="'Which is '+ animalforquiz.name + ' ' + listofparameters2[randparam]" v-slot="{ ariaDescribedby }">
-            <b-form-radio v-for="item in repliesize" :key="item.index" :aria-describedby="ariaDescribedby" name="some-radios" :value=item>{{item}}</b-form-radio>
+            <b-form-radio v-for="item in repliesize" :key="item.index" v-model="control" :aria-describedby="ariaDescribedby" name="some-radios" :value=item>{{item}}</b-form-radio>
         </b-form-group>
        <p>{{animalforquiz[listofparameters[randparam]]}}</p>
-       <button v-on:click="checkAnswer">Verifica</button>
+       <button v-on:click="checkAnswer" :disabled="!control">Verifica</button>
        <p :v-model="score">{{score}}</p>
     </div>
 </template>
@@ -19,6 +19,7 @@
                 answer: " ",
                 score: 0,
                 list: [],
+                control: false,
                 animalforquiz: [],
                 fieldsforquiz: [],
                 repliesize: [],
@@ -48,7 +49,8 @@
                     console.log(error);
                 });
             },
-            checkAnswer(){ // disabilita bottone dopo primo click e verifica che sia stato selezionato un radio
+            checkAnswer(){ 
+                this.control = false;
                 const radio = document.getElementsByName('some-radios');
                 for(let i=0; i<radio.length; i++){
                     if(radio[i].checked){
