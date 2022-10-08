@@ -102,9 +102,6 @@
                 if(this.selectedIndex === this.correctIndex){
                     this.score = this.score + 1;
                 }
-                 /* else {
-                    this.getCuriosity();
-                } */
             },
             prepareQuiz(){
                 this.fieldsforquiz.push(this.animalforquiz[this.listofparameters[this.randparam]]);
@@ -124,7 +121,7 @@
                         this.repliesize.push(this.fieldsforquiz[j]);
                     }
                     this.repliesize.sort(function(){return 0.5 - Math.random()});
-                    this.correctIndex = this.repliesize.findIndex(this.findCorrectIndex)
+                    this.correctIndex = this.repliesize.findIndex(this.findCorrectIndex);
                 }
             },
             repeatQuiz(){
