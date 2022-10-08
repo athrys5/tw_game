@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar">
             <div> 
                 <b-button 
                 v-b-toggle.sidebar-no-header
@@ -36,3 +36,9 @@
     <Nuxt />
   </div>
 </template>
+
+<style>
+    .navbar{
+        background-color: #BC4749;
+    }
+</style>
