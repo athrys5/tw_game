@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
     const axios = require("axios");
     export default {
         data(){
@@ -29,6 +28,11 @@
         },
         methods:{
             getCuriosity(){
+                this.list = [];
+                this.animalforquiz = [];
+                this.fieldsforquiz = [];
+                this.repliesize = [];
+                this.answer = " ";
                 this.randparam = Math.floor(Math.random()*(8-0+1))+0;
                 this.randanimal= Math.floor(Math.random()*(9-0+1))+0;
                 this.list = [];
@@ -39,25 +43,12 @@
                 .then( (response) => {
                     this.list = response.data;
                     this.animalforquiz = this.list[this.randanimal];
-                    this.fieldsforquiz.push(this.animalforquiz[this.listofparameters[this.randparam]]);
-                    const par = this.list;
-                    for(let i=0; i<this.list.length; i++){
-                        if(this.animalforquiz[this.listofparameters[this.randparam]]!== par[i][this.listofparameters[this.randparam]]){
-                            this.fieldsforquiz.push(par[i][this.listofparameters[this.randparam]]);
-                        }
-                    }
-                    const prova = [...new Set(this.fieldsforquiz)];
-                    this.fieldsforquiz = Array.from(prova);
-                    this.repliesize.push(this.fieldsforquiz[0]);
-                    for(let j=1; j<3; j++){
-                        this.repliesize.push(this.fieldsforquiz[j]);
-                    }
-                    this.repliesize.sort(function(){return 0.5 - Math.random()});
+                    this.prepareQuiz();
                 }).catch(function (error) {
                     console.log(error);
                 });
             },
-            checkAnswer(){ // disabilita bottone dopo primo click 
+            checkAnswer(){ // disabilita bottone dopo primo click e verifica che sia stato selezionato un radio
                 const radio = document.getElementsByName('some-radios');
                 for(let i=0; i<radio.length; i++){
                     if(radio[i].checked){
@@ -70,6 +61,23 @@
                 }else {
                     console.log("errato");
                 }
+                this.getCuriosity();
+            },
+            prepareQuiz(){
+                this.fieldsforquiz.push(this.animalforquiz[this.listofparameters[this.randparam]]);
+                const par = this.list;
+                for(let i=0; i<this.list.length; i++){
+                    if(this.animalforquiz[this.listofparameters[this.randparam]]!== par[i][this.listofparameters[this.randparam]]){
+                        this.fieldsforquiz.push(par[i][this.listofparameters[this.randparam]]);
+                    }
+                }
+                const prova = [...new Set(this.fieldsforquiz)];
+                this.fieldsforquiz = Array.from(prova);
+                this.repliesize.push(this.fieldsforquiz[0]);
+                for(let j=1; j<3; j++){
+                    this.repliesize.push(this.fieldsforquiz[j]);
+                }
+                this.repliesize.sort(function(){return 0.5 - Math.random()});
             },
         },
         mounted() {
