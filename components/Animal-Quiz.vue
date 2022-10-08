@@ -2,8 +2,7 @@
     <div class="app">
         <section class="quiz" v-if="!quizfinished">
             <div class="quiz-info">
-                <span class="question">Which is {{animalforquiz.name}} {{listofparameters2[randparam]}}</span>
-                <span class="score" :v-model="score">Score {{score}}/{{questionnumber}}</span>
+                <span class="question">Which is {{animalforquiz.name}} {{listofparameters2[randparam]}} ?</span>
             </div>
             <div class="options">
                 <label 
