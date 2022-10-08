@@ -11,7 +11,7 @@
 						type="radio" 
 						name="some-radios" 
 						:value=item
-						v-model="control" 
+						v-model="control"
 					/>
                     {{item}}
                 </label>
