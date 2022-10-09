@@ -50,8 +50,14 @@
                 </iframe>
                 <div class="card-body">
                     <h5 class="card-title text-left">{{video.snippet.title}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">
+                        <span style="font-weight: 600">Channel Title: </span><span>{{video.snippet.channelTitle}}</span><br>
+                        <span>{{video.snippet.publishedAt}}</span>
+                    </p>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <button class="descButton2" v-if="search" v-on:click="getVideos">+</button>
             </div>
         </div>
     </div>
@@ -65,10 +71,12 @@
                 vlist: [],
                 setCategory: "",
                 isChecked: false,
+                search: false,
             }
         },
         methods:{
             getVideos(){
+                this.search = true;
                 this.pickCategory()
                 if(!this.isChecked){
                     this.vlist = []
@@ -103,7 +111,7 @@
                 }else{
                     this.isChecked = true
                 }
-            }
+            },
         }
     }
 </script>
