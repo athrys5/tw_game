@@ -60,6 +60,21 @@
                 <button class="descButton2" v-if="search" v-on:click="getVideos">+</button>
             </div>
         </div>
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1" v-model="selected">
+                <option value="date" selected>Date</option>
+                <option value="rating">Rating</option>
+                <option value="relevance">Relevance</option>
+                <option value="title">Title</option>
+                <option value="videoCount">Video Count</option>
+                <option value="viewCount">View Count</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Video n:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" v-model="vNum">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
     </div>
 </template>
 
@@ -72,6 +87,9 @@
                 setCategory: "",
                 isChecked: false,
                 search: false,
+                numResult: 0,
+                selected: "date",
+                vNum: 1,
             }
         },
         methods:{
@@ -85,9 +103,10 @@
                         url: 'https://www.googleapis.com/youtube/v3/search',
                         params: {
                             part: 'snippet',
-                            key: "AIzaSyCUq1SbbgrOTyIoAxq-O9l5eGx6SRHL-n0",
+                            key: "AIzaSyD2vaibQ0DVyEdo8x0_aCv-tUYsNzARdFU",
                             q: this.setCategory,
-                            maxResults: 4,
+                            maxResults: this.vNum,
+                            order: this.selected,
                             type: 'video',
                             videoDuration: "short",
                             videoEmbeddable: true,
@@ -112,7 +131,7 @@
                     this.isChecked = true
                 }
             },
-        }
+        },
     }
 </script>
 
