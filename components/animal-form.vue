@@ -33,7 +33,7 @@
         <section class="todo-list">
             <h3>I TUOI ANIMALI</h3>
             <div class="todo" id="todo-list">
-                <div v-for="item in itemsAsc" :key=item-item>
+                <div v-for="item in itemsAsc" :key=item.id>
                     <div class="todo-content">
                         <b-card
                             :header=item.AnimalName
@@ -57,10 +57,10 @@
 <script setup>
     import { ref, onMounted, watch, computed } from 'vue'
     const items = ref([])
-    const inputAnimalName = ref('')
-    const inputAnimalType = ref('')
-    const inputAnimalRace = ref('')
-    const inputAnimalAge = ref('')
+    const inputAnimalName = ref()
+    const inputAnimalType = ref()
+    const inputAnimalRace = ref()
+    const inputAnimalAge = ref()
     const itemsAsc = computed(() => items.value.slice(0).sort((a,b) =>{
 	    return a.createdAt - b.createdAt
     })) 
