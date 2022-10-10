@@ -1,39 +1,37 @@
 <template>
     <div class="app">
-        <section class="quiz" v-if="!quizfinished">
+        <section v-if="!quizfinished" class="quiz">
             <div class="quiz-info">
                 <span class="question">Which is {{animalforquiz.name}} {{listofparameters2[randparam]}} ?</span>
             </div>
             <div class="options">
                 <label 
                     v-for="(item, index) in repliesize" 
-                    :key="index" 
+                    :id="answerId(index)" 
+                    :key="index"
                     class="option"
                     @click="selectAnswer(index)"
-                    :id="answerId(index)"
                 >
                     <input 
+                        v-model="control"
 						type="radio" 
 						name="some-radios" 
 						:value=item
-						v-model="control"
 					/>
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
-            <button v-on:click="checkAnswer" :disabled="!control" v-if="submitbutton">Submit</button>
-            <button v-on:click="getCuriosity" v-if="!submitbutton">{{labelbutton}}</button>
+            <button v-if="submitbutton" :disabled="!control" @click="checkAnswer" >Submit</button>
+            <button v-if="!submitbutton" @click="getCuriosity">{{labelbutton}}</button>
             </div>
        </section>
        <section v-else class="showscore">
 			<h2>You have finished the quiz!</h2>
 			<p>Your score is {{score}}</p>
-            <button v-on:click="repeatQuiz">Repeat the Quiz</button>
+            <button @click="repeatQuiz">Repeat the Quiz</button>
 		</section>
     </div>
 </template>
-
-<style src="./Animal-Quiz.css"></style>
 
 <script>
     const axios = require("axios");
@@ -60,6 +58,9 @@
                 listofparameters2: ["latin name", "minimum length (in meters)", "maximum length (in meters)", "minimum weight (in kilos)", "maximum weight (in kilos)", "lifespan", "habitat", "diet", "geo range"],
             }
         },
+        mounted() {
+            this.getCuriosity();
+        },
         methods:{
             getCuriosity(){
                 if(this.incorrect){
@@ -67,6 +68,7 @@
                     this.answered = false;
                     this.incorrect = false;
                 } else {
+                    this.labelbutton= "Next Question";
                     this.answered = false;
                     this.submitbutton = true;
                     this.selectedIndex = null;
@@ -148,9 +150,8 @@
             findCorrectIndex(field){
                 return field === this.animalforquiz[this.listofparameters[this.randparam]];
             }
-        },
-        mounted() {
-            this.getCuriosity();
         }
     }
 </script>
+
+<style src="./Animal-Quiz.css"></style>
