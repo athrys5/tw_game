@@ -1,1 +1,8 @@
-{}
+{
+  "AnimalQuiz": {
+    "description": "Auto imported from components/Animal-Quiz.vue"
+  },
+  "CuriositaAnimali": {
+    "description": "Auto imported from components/Curiosita-Animali.vue"
+  }
+}

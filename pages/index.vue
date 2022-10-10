@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <Animal-Quiz />
+  </div>
 </template>
 
 <script>
