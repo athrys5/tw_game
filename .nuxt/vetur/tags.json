@@ -1,0 +1,17 @@
+{
+  "AnimalForm": {
+    "description": "Auto imported from components/animal-form.vue"
+  },
+  "AnimalQuiz": {
+    "description": "Auto imported from components/Animal-Quiz.vue"
+  },
+  "CuriositaAnimali": {
+    "description": "Auto imported from components/Curiosita-Animali.vue"
+  },
+  "MyCuriosity": {
+    "description": "Auto imported from components/my-curiosity.vue"
+  },
+  "YoutubeVideo": {
+    "description": "Auto imported from components/youtube-video.vue"
+  }
+}

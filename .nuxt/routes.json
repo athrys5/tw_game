@@ -1,5 +1,12 @@
 [
   {
+    "name": "curiosities",
+    "path": "/curiosities",
+    "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\curiosities.vue",
+    "chunkName": "pages/curiosities",
+    "_name": "_90d31a5a"
+  },
+  {
     "name": "games",
     "path": "/games",
     "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\games.vue",
@@ -7,11 +14,25 @@
     "_name": "_2d60c975"
   },
   {
+    "name": "generalcuriosities",
+    "path": "/generalcuriosities",
+    "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\generalcuriosities.vue",
+    "chunkName": "pages/generalcuriosities",
+    "_name": "_41fc6633"
+  },
+  {
     "name": "videos",
     "path": "/videos",
     "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\videos.vue",
     "chunkName": "pages/videos",
     "_name": "_71d1ae58"
+  },
+  {
+    "name": "yourpet",
+    "path": "/yourpet",
+    "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\yourpet.vue",
+    "chunkName": "pages/yourpet",
+    "_name": "_58291b80"
   },
   {
     "name": "index",

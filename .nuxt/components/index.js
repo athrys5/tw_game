@@ -1,5 +1,7 @@
+export { default as AnimalForm } from '../..\\components\\animal-form.vue'
 export { default as AnimalQuiz } from '../..\\components\\Animal-Quiz.vue'
 export { default as CuriositaAnimali } from '../..\\components\\Curiosita-Animali.vue'
+export { default as MyCuriosity } from '../..\\components\\my-curiosity.vue'
 export { default as YoutubeVideo } from '../..\\components\\youtube-video.vue'
 
 // nuxt/nuxt.js#8607

@@ -4,8 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _90d31a5a = () => interopDefault(import('..\\pages\\curiosities.vue' /* webpackChunkName: "pages/curiosities" */))
 const _2d60c975 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
+const _41fc6633 = () => interopDefault(import('..\\pages\\generalcuriosities.vue' /* webpackChunkName: "pages/generalcuriosities" */))
 const _71d1ae58 = () => interopDefault(import('..\\pages\\videos.vue' /* webpackChunkName: "pages/videos" */))
+const _58291b80 = () => interopDefault(import('..\\pages\\yourpet.vue' /* webpackChunkName: "pages/yourpet" */))
 const _7ef161f4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -20,13 +23,25 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/curiosities",
+    component: _90d31a5a,
+    name: "curiosities"
+  }, {
     path: "/games",
     component: _2d60c975,
     name: "games"
   }, {
+    path: "/generalcuriosities",
+    component: _41fc6633,
+    name: "generalcuriosities"
+  }, {
     path: "/videos",
     component: _71d1ae58,
     name: "videos"
+  }, {
+    path: "/yourpet",
+    component: _58291b80,
+    name: "yourpet"
   }, {
     path: "/",
     component: _7ef161f4,

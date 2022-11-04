@@ -31,9 +31,15 @@
                           <NuxtLink to="/" style="text-decoration: none; color: inherit;">
                             <li><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
                           </NuxtLink>
-                          <li><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
-                          <li><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
-                          <li><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
+                          <NuxtLink to="/yourpet" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
+                          </NuxtLink>
+                          <NuxtLink to="/curiosities" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
+                          </NuxtLink>
+                          <NuxtLink to="/generalcuriosities" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
+                          </NuxtLink>
                           <NuxtLink to="/games" style="text-decoration: none; color: inherit;">
                             <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
                           </NuxtLink>
