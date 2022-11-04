@@ -1,0 +1,181 @@
+:root {
+	--primary: #EA40A4;
+	--business: #3A82EE;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+body {
+  background-color: rgba(248, 248, 248, 0.808);
+}
+
+.form-check label{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem;
+	background-color: #EEE;
+	border-radius: 0rem;
+	cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.form-check label:hover{
+  transition: transform 0.5s;
+  transform: translateY(4px);
+}
+
+.form-check label:click{
+  transform: translateY(4px);
+}
+
+.formButton{
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.extCon{
+	margin-top: 3rem;
+}
+.extCon2{
+  margin-top: 0.2rem;
+}
+
+.button-1 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 50px;
+  outline: 0;
+  padding: 0px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.button-1:active {
+  transform: translateY(4px);
+}
+
+.button-1:focus{
+  background-color: initial;
+  color: #FF4742;
+}
+
+.button-1:hover{
+  background-color: initial;
+  color: #FF4742;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble.personal {
+	border-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+.bubble::after {
+	content: "";
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after {
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.catTitles{
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.CustomCat{
+  font-family:'Franklin Gothic Medium';
+  margin: 0;
+  text-align: center;
+  line-height: 0.9;
+  font-weight: 500;
+  color: #353535;
+}
+
+.videoSize{
+  min-height: 15rem;
+}
+
+.cardCustom{
+  margin: 0.3rem;
+  padding: 0rem;
+  border-radius: 0rem;
+  background-color: white;
+  color: black;
+}
+
+.cardCustom:hover{
+  transition: transform 0.5s;
+  transform: translateY(-4px);
+}
+
+.descButton2{
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 50px;
+  outline: 0;
+  padding: 0px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 50px;
+}

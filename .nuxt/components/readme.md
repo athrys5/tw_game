@@ -8,3 +8,4 @@ You can directly use them in pages and other components without the need to impo
 
 - `<AnimalQuiz>` | `<animal-quiz>` (components/Animal-Quiz.vue)
 - `<CuriositaAnimali>` | `<curiosita-animali>` (components/Curiosita-Animali.vue)
+
