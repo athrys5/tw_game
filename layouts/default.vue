@@ -5,7 +5,7 @@
             <nav class="navbar">
               <button 
                 v-b-toggle.sidebar-no-header
-                class="button-1"
+                class="btnNavbar"
               >
                       <b-icon-list 
                         style="color: #a53f3c;"
@@ -37,7 +37,9 @@
                           <NuxtLink to="/games" style="text-decoration: none; color: inherit;">
                             <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
                           </NuxtLink>
-                          <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
+                          <NuxtLink to="/videos" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
+                          </NuxtLink>
                         </ul>
                       </div>
                       <div class="buttoncustom"> 

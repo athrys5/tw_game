@@ -4,5 +4,8 @@
   },
   "CuriositaAnimali": {
     "description": "Auto imported from components/Curiosita-Animali.vue"
+  },
+  "YoutubeVideo": {
+    "description": "Auto imported from components/youtube-video.vue"
   }
 }
