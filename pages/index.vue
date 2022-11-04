@@ -1,6 +1,5 @@
 <template>
   <div>
-    <youtube-video />
   </div>
 </template>
 

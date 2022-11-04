@@ -1,44 +1,75 @@
 <template>
-  <div>
-    <div>
-        <nav class="navbar">
-            <div> 
-                <b-button 
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="fix_1">
+            <nav class="navbar">
+              <button 
                 v-b-toggle.sidebar-no-header
-                class="btn">
-                    <span class="navbar-toggler-icon"></span>
-                </b-button>
+                class="button-1"
+              >
+                      <b-icon-list 
+                        style="color: #a53f3c;"
+                        font-scale="1.8" 
+                      ></b-icon-list>
+              </button>
+              <div class="sidebarcontent">
                 <b-sidebar 
-                id="sidebar-no-header"
-                aria-labelledby="sidebar-no-header-title"
-                no-header
-                shadow
-                width="450px">
-                <template #default="{ hide }">
-                    <div class="p-3 idk">
-                    <h4 id="sidebar-no-header-title">Game</h4>
-                    </div>
-                    <div class="p-3">
-                    <nav class="mb-3">
-                        <b-nav vertical>
-                        <b-nav-item class="item-menu" @click="hide">I tuoi Amici</b-nav-item>
-                        <b-nav-item class="item-menu" @click="hide">Giochi</b-nav-item>
-                        <b-nav-item class="item-menu" @click="hide">Video</b-nav-item>
-                        </b-nav>
-                    </nav>
-                    <b-button block @click="hide">Close Sidebar</b-button>
-                    </div>
-                </template>
+                  id="sidebar-no-header"
+                  aria-labelledby="sidebar-no-header-title"
+                  no-header
+                  backdrop-variant="dark"
+                  backdrop
+                  shadow
+                  width="450px"
+                  >
+                    <template #default="{ hide }">
+                      <div class="sidetitle">
+                        <h4 id="sidebar-no-header-title">Game App</h4>
+                      </div>
+                      <div class="activities">
+                        <ul>
+                          <NuxtLink to="/" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
+                          </NuxtLink>
+                          <li><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
+                          <li><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
+                          <li><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
+                          <NuxtLink to="/games" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
+                          </NuxtLink>
+                          <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
+                        </ul>
+                      </div>
+                      <div class="buttoncustom"> 
+                        <button class="button-2" @click="hide">Back</button>
+                      </div>
+                    </template>
                 </b-sidebar>
-            </div>
-        </nav>
+              </div>
+            </nav> 
+        </div>
     </div>
-    <Nuxt />
+    <div class="row justify-content-center">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
-<style>
-    .navbar{
-        background-color: #FF4742;
-    }
-</style>
+<script>
+import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse} from 'bootstrap-vue' 
+
+export default {
+  components: {
+    BIconList,
+    BIconBook,
+    BIconCollectionPlay,
+    BIconJoystick,
+    BIconPencil, 
+    BIconQuestionLg,
+    BIconHouse,
+  },
+}
+</script>
+
+
+<style src="./default.css"></style>

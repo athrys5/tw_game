@@ -1,0 +1,32 @@
+.curiosity {
+    text-align: center;
+}
+
+.card {
+    margin-top: 10px;
+    float: none; 
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.card-img-top {
+    border-radius: 1rem;
+}
+
+.card-text {
+    font-size: large;
+}
+
+.button {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #ff4548;
+	color: #FFF;
+    font-size: 1.2rem;
+	border-radius: 0.5rem;
+    appearance: none;
+	outline: none;
+	border: none;
+    font-weight: 700;
+}

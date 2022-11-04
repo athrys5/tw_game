@@ -1,5 +1,12 @@
 [
   {
+    "name": "games",
+    "path": "/games",
+    "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\games.vue",
+    "chunkName": "pages/games",
+    "_name": "_2d60c975"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\index.vue",

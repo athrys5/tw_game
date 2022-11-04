@@ -1,4 +1,5 @@
-export { default as YoutubeVideo } from '../..\\components\\youtube-video.vue'
+export { default as AnimalQuiz } from '../..\\components\\Animal-Quiz.vue'
+export { default as CuriositaAnimali } from '../..\\components\\Curiosita-Animali.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
