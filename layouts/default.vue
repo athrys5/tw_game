@@ -28,10 +28,15 @@
                       </div>
                       <div class="activities">
                         <ul>
+                          <NuxtLink to="/" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
+                          </NuxtLink>
                           <li><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
                           <li><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
                           <li><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
-                          <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
+                          <NuxtLink to="/games" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
+                          </NuxtLink>
                           <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
                         </ul>
                       </div>
@@ -51,7 +56,7 @@
 </template>
 
 <script>
-import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg} from 'bootstrap-vue' 
+import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse} from 'bootstrap-vue' 
 
 export default {
   components: {
@@ -61,6 +66,7 @@ export default {
     BIconJoystick,
     BIconPencil, 
     BIconQuestionLg,
+    BIconHouse,
   },
 }
 </script>
