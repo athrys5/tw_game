@@ -1,7 +1,3 @@
-export { default as AnimalForm } from '../..\\components\\animal-form.vue'
-export { default as MyCuriosity } from '../..\\components\\my-curiosity.vue'
-
-// nuxt/nuxt.js#8607
 function wrapFunctional(options) {
   if (!options || !options.functional) {
     return options
