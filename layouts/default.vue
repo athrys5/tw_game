@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid layoutcontainer">
     <div class="row justify-content-center">
         <div class="fix_1">
             <nav class="navbar">
@@ -57,9 +57,7 @@
             </nav> 
         </div>
     </div>
-    <div class="row justify-content-center">
-      <Nuxt />
-    </div>
+    <Nuxt />
   </div>
 </template>
 

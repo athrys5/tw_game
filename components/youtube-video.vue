@@ -1,47 +1,64 @@
 <template>
-    <div>
-        <div class="container-fluid col-10 firstContainer">
-            <div class="row justify-content-center extCon">
-                <div class="col-12 col-sm-6 form-check">
-                    <label class="shadow-lg">
-                        <input
-                            type="radio" 
-                            name="category" 
-                            id="category1"
-                            value="animal documentaries"
-                            >
-                        <span class="bubble business"></span>
-                        <div class="catTitles">
-                            <h4 class="CustomCat">Documentaries</h4>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div class="row justify-content-center extCon2">
-                <div class="col-12 col-sm-6 form-check">
-                    <label class="shadow-lg">
-                        <input
-                            type="radio" 
-                            name="category" 
-                            id="category2"
-                            value="funny animal videos"
+    <div class="container-fluid videocontainer">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 form-check">
+                <label class="shadow-lg">
+                    <input
+                        type="radio" 
+                        name="category" 
+                        id="category1"
+                        value="animal documentaries"
                         >
-                        <span class="bubble personal"></span>
-                        <div class="catTitles">
-                            <h4 class="CustomCat text-wrap">Funny</h4>
-                        </div>
-                    </label> 
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 formButton">
-                    <button class="button-1 shadow-lg" v-on:click="getVideos">Search</button>
-                </div>
+                    <span class="bubble business"></span>
+                    <div class="catTitles">
+                        <h4 class="CustomCat">Documentaries</h4>
+                    </div>
+                </label>
             </div>
         </div>
-        <div class="container-fluid col-12 col-sm-8 col-lg-6">
-            <div class="row card cardCustom shadow-sm" v-for="video in vlist" :key="video.id.videoId" >
-                <iframe
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 form-check">
+                <label class="shadow-lg">
+                    <input
+                        type="radio" 
+                        name="category" 
+                        id="category2"
+                        value="funny animal videos"
+                    >
+                    <span class="bubble personal"></span>
+                    <div class="catTitles">
+                        <h4 class="CustomCat text-wrap">Funny</h4>
+                    </div>
+                </label> 
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 formButton">
+                <button class="searchbtn shadow-lg" v-on:click="getVideos">Search</button>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center filtercontainer">
+            <div class="col">
+                <label for="filter" class="form-label">Filter</label>
+                <select class="form-control" id="filter" v-model="selected">
+                    <option value="date" selected>Date</option>
+                    <option value="rating">Rating</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="title">Title</option>
+                    <option value="videoCount">Video Count</option>
+                    <option value="viewCount">View Count</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="vidnum" class="form-label">Video n.</label>
+                <input type="number" id="vidnum" v-model="vNum" class="form-control vidnum" />
+            </div>
+        </div>
+    
+        <div class="row justify-content-center ytcards">
+            <div class="col-12 col-md-8 col-lg-3 card cardCustom" v-for="video in vlist" :key="video.id.videoId" >
+                <iframe 
                     class = "videoSize"
                     frameBorder="0"
                     :src="'https://www.youtube.com/embed/'+video.id.videoId"  
@@ -56,24 +73,6 @@
                     </p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <button class="descButton2" v-if="search" v-on:click="getVideos">+</button>
-            </div>
-        </div>
-        <div class="form-group">
-            <select class="form-control" id="exampleFormControlSelect1" v-model="selected">
-                <option value="date" selected>Date</option>
-                <option value="rating">Rating</option>
-                <option value="relevance">Relevance</option>
-                <option value="title">Title</option>
-                <option value="videoCount">Video Count</option>
-                <option value="viewCount">View Count</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Video n:</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" v-model="vNum">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
     </div>
 </template>

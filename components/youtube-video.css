@@ -1,15 +1,15 @@
-:root {
-	--primary: #EA40A4;
-	--business: #3A82EE;
-	--personal: var(--primary);
-	--light: #EEE;
-	--grey: #888;
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
-}
-
 body {
   background-color: rgba(248, 248, 248, 0.808);
+}
+
+.videocontainer{
+  margin-top: 90px;
+  padding: 0;
+}
+
+.videocontainer .row{
+  padding: 0;
+  margin: 0;
 }
 
 .form-check label{
@@ -39,6 +39,10 @@ body {
 	border-radius: 0.5rem;
 }
 
+.filtercontainer{
+  margin-bottom: 1rem !important;
+}
+
 .extCon{
 	margin-top: 3rem;
 }
@@ -46,7 +50,7 @@ body {
   margin-top: 0.2rem;
 }
 
-.button-1 {
+.searchbtn {
   background: #FF4742;
   border: 1px solid #FF4742;
   border-radius: 2rem;
@@ -68,16 +72,16 @@ body {
   width: 100%;
 }
 
-.button-1:active {
+.searchbtn:active {
   transform: translateY(4px);
 }
 
-.button-1:focus{
+.searchbtn:focus{
   background-color: initial;
   color: #FF4742;
 }
 
-.button-1:hover{
+.searchbtn:hover{
   background-color: initial;
   color: #FF4742;
 }
@@ -94,30 +98,26 @@ input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	border: 2px solid var(--business);
-	box-shadow: var(--business-glow);
+	border: 2px solid #3A82EE;
 }
 
 .bubble.personal {
-	border-color: var(--personal);
-	box-shadow: var(--personal-glow);
+	border-color: #EA40A4;
 }
 
 .bubble::after {
 	content: "";
-	display: block;
+	display: flex;
 	opacity: 0;
 	width: 0px;
 	height: 0px;
-	background-color: var(--business);
-	box-shadow: var(--business-glow);
+	background-color: #3A82EE;
 	border-radius: 50%;
 	transition: 0.2s ease-in-out;
 }
 
 .bubble.personal::after {
-	background-color: var(--personal);
-	box-shadow: var(--personal-glow);
+	background-color: #EA40A4;
 }
 
 input:checked ~ .bubble::after {
@@ -142,14 +142,16 @@ input:checked ~ .bubble::after {
 
 .videoSize{
   min-height: 15rem;
+  width: 100%;
 }
 
 .cardCustom{
-  margin: 0.3rem;
   padding: 0rem;
   border-radius: 0rem;
   background-color: white;
   color: black;
+  border: 0;
+  margin: 1px;
 }
 
 .cardCustom:hover{
@@ -179,3 +181,4 @@ input:checked ~ .bubble::after {
   font-size: 25px;
   width: 50px;
 }
+

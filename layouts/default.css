@@ -2,6 +2,16 @@ body {
   background-color: rgba(248, 248, 248, 0.808);
 }
 
+.layoutcontainer{
+  margin: 0;
+  padding: 0;
+}
+
+.layoutcontainer .row{
+  margin: 0;
+  padding: 0;
+}
+
 .btnNavbar {
   align-items: center;
   appearance: none;
@@ -48,6 +58,8 @@ body {
     background: #FF4742;
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #a53f3c 0 -2px 0 inset;
     box-sizing: border-box;
+    position: fixed;
+    z-index: 9999;
 }
 
 .fix_1{
