@@ -1,8 +1,10 @@
 <template>
-    <div class="container-fluid">
-        <div class="row justify-content-center curiosity">
-            <div class="col-sm-12 col-md-8 card">
-                <h1>Did you know?</h1>
+    <div class="container-fluid curiositycontainer">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h1 style="margin-bottom: 60px; text-align: center;">Did you know?</h1>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-6 card curiositycard">  
                 <img class="card-img-top" :src="list.image_link" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{list.name}}</h5>

@@ -1,56 +1,64 @@
 <template>
-    <div class="app"> 
-        <section class="create-todo">
-            <h4>DESCRIBE YOUR ANIMAL</h4>
-            <form id="new-todo-form" @submit.prevent="additem">
-                <input 
-                    type="text" 
-                    name="AnimalName" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalName" />
-                <input 
-                    type="text" 
-                    name="AnimalType" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalType" />
-                <input 
-                    type="text" 
-                    name="AnimalRace" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalRace" />
-                <input 
-                    type="text" 
-                    name="AnimalAge" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalAge" />
-                <input type="submit" value="Add item"/>
-            </form>
-        </section>
-        <section class="todo-list">
-            <h3>I TUOI ANIMALI</h3>
-            <div class="todo" id="todo-list">
-                <div v-for="item in itemsAsc" :key=item.id>
-                    <div class="todo-content">
-                        <b-card
-                            :header=item.AnimalName
-                            header-text-variant="white"
-                            header-tag="header"
-                            header-bg-variant="dark"
-                            style="max-width: 20rem;"
-                        >
-                            <input type="text" v-model="item.AnimalType"/>
-                            <input type="text" v-model="item.AnimalRace"/>
-                            <input type="text" v-model="item.AnimalAge"/>
+    <div class="container-fluid app"> 
+        <div class="row justify-content-center">
+            <span class="pagetitle">Describe your Pets</span>
+            <div class="subpetdiv col-12 col-md-6">
+                <form id="new-todo-form" @submit.prevent="additem">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <input 
+                                type="text" 
+                                name="AnimalName" 
+                                id="content" 
+                                placeholder="Name"
+                                v-model="inputAnimalName" />
+                        </div>
+                        <div class="col-12">
+                        <input 
+                            type="text" 
+                            name="AnimalType" 
+                            id="content1" 
+                            placeholder="Type"
+                            v-model="inputAnimalType" />
+                        </div>
+                        <div class="col-12">
+                            <input 
+                                type="text" 
+                                name="AnimalRace" 
+                                id="content2" 
+                                placeholder="Breed"
+                                v-model="inputAnimalRace" />
+                        </div>
+                        <div class="col-12">
+                            <input 
+                                type="text" 
+                                name="AnimalAge" 
+                                id="content3" 
+                                placeholder="Age"
+                                v-model="inputAnimalAge" />
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btnNavbar h4" value="Add item">Add Pet</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 content-card" v-for="item in itemsAsc" :key=item.id>
+                <div class="card-big-shadow">
+                    <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
+                        <div class="content">
+                            <h4 class="petname">{{item.AnimalName}}</h4>
+                            <p class="description"><b>Type </b>{{item.AnimalType}} </p>
+                            <p class="description"><b>Breed </b>{{item.AnimalRace}} </p>
+                            <p class="description"><b>Age </b>{{item.AnimalAge}} </p>             
                             <b-button variant="primary" @click="removeitem(item)">Delete</b-button>
-                        </b-card>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 </template>
 

@@ -1,24 +1,42 @@
+body {
+    background-color: rgba(248, 248, 248, 0.808);
+  }
+
+.curiositycontainer{
+    margin-top: 90px;
+    padding: 0;
+}
+
 .curiosity {
     text-align: center;
 }
+.curiositycard{
+    background-color: #F5F8FA;
+    color: #14171A;
+    border: 0;
+    margin: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-.card {
+.curiositycard .card-img-top{
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 5px rgb(219, 219, 219);
+    margin-top: -40px;
+}
+
+.curiositycard .card-title{
     margin-top: 10px;
-    float: none; 
-    margin-bottom: 10px;
-    align-items: center;
-    border-radius: 1rem;
 }
 
-.card-img-top {
-    border-radius: 1rem;
+.curiositycard .card-body{
+    padding: 0;
 }
 
-.card-text {
-    font-size: large;
-}
 
-.button {
+/*.button {
     width: 100%;
     margin-bottom: 20px;
     background-color: #ff4548;
@@ -29,4 +47,4 @@
 	outline: none;
 	border: none;
     font-weight: 700;
-}
+}*/

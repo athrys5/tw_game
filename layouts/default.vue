@@ -27,7 +27,7 @@
                         <h4 id="sidebar-no-header-title">Game App</h4>
                       </div>
                       <div class="activities">
-                        <ul>
+                        <ul style="padding: 0;">
                           <NuxtLink to="/" style="text-decoration: none; color: inherit;">
                             <li><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
                           </NuxtLink>
