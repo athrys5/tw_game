@@ -8,6 +8,9 @@
   "CuriositaAnimali": {
     "description": "Auto imported from components/Curiosita-Animali.vue"
   },
+  "HomePage": {
+    "description": "Auto imported from components/Home-Page.vue"
+  },
   "MyCuriosity": {
     "description": "Auto imported from components/my-curiosity.vue"
   },

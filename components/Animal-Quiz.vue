@@ -21,14 +21,14 @@
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
-            <button v-if="submitbutton" :disabled="!control" @click="checkAnswer" >Submit</button>
-            <button v-if="!submitbutton" @click="getCuriosity">{{labelbutton}}</button>
+            <button v-if="submitbutton" :disabled="!control" @click="checkAnswer" class="quizbtn">Submit</button>
+            <button v-if="!submitbutton" @click="getCuriosity" class="quizbtn">{{labelbutton}}</button>
             </div>
        </section>
        <section v-else class="showscore">
 			<h2>You have finished the quiz!</h2>
 			<p>Your score is {{score}}</p>
-            <button @click="repeatQuiz">Repeat the Quiz</button>
+            <button @click="repeatQuiz" class="quizbtn">Repeat the Quiz</button>
 		</section>
     </div>
 </template>

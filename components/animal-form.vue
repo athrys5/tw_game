@@ -1,61 +1,78 @@
 <template>
-    <div class="app"> 
-        <section class="create-todo">
-            <h4>DESCRIBE YOUR ANIMAL</h4>
-            <form id="new-todo-form" @submit.prevent="additem">
-                <input 
-                    type="text" 
-                    name="AnimalName" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalName" />
-                <input 
-                    type="text" 
-                    name="AnimalType" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalType" />
-                <input 
-                    type="text" 
-                    name="AnimalRace" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalRace" />
-                <input 
-                    type="text" 
-                    name="AnimalAge" 
-                    id="content" 
-                    placeholder="e.g. make a video"
-                    v-model="inputAnimalAge" />
-                <input type="submit" value="Add item"/>
-            </form>
-        </section>
-        <section class="todo-list">
-            <h3>I TUOI ANIMALI</h3>
-            <div class="todo" id="todo-list">
-                <div v-for="item in itemsAsc" :key=item.id>
-                    <div class="todo-content">
-                        <b-card
-                            :header=item.AnimalName
-                            header-text-variant="white"
-                            header-tag="header"
-                            header-bg-variant="dark"
-                            style="max-width: 20rem;"
-                        >
-                            <input type="text" v-model="item.AnimalType"/>
-                            <input type="text" v-model="item.AnimalRace"/>
-                            <input type="text" v-model="item.AnimalAge"/>
-                            <b-button variant="primary" @click="removeitem(item)">Delete</b-button>
-                        </b-card>
+    <div class="container-fluid pagecontainer">
+      <div class="row justify-content-center">
+        <span class="pagetitle">Describe your Pets</span>
+      </div>
+      <div class="row justify-content-center">
+        <div class="subpetdiv col-12 col-md-6">
+            <form id="new-todo-form" ref={clearForm} @submit.prevent="additem">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <input
+                            id="content"
+                            v-model="inputAnimalName"
+                            type="text"
+                            name="AnimalName"
+                            placeholder="Name" />
+                    </div>
+                    <div class="col-12">
+                    <input
+                        id="content1"
+                        v-model="inputAnimalType"
+                        type="text"
+                        name="AnimalType"
+                        placeholder="Type" />
+                    </div>
+                    <div class="col-12">
+                        <input
+                            id="content2"
+                            v-model="inputAnimalRace"
+                            type="text"
+                            name="AnimalRace"
+                            placeholder="Breed" />
+                    </div>
+                    <div class="col-12">
+                        <input
+                            id="content3"
+                            v-model="inputAnimalAge"
+                            type="number"
+                            name="AnimalAge"
+                            placeholder="Age" />
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btnNavbar h4" value="Add item">Add Pet</button>
+                    </div>
+                    <div class="col-12">
+                      <small class="form-text text-muted">
+                        Be accurate describing your friend to find out curiosities!
+                      </small>
                     </div>
                 </div>
-            </div>
-        </section>
+            </form>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div v-for="item in itemsAsc" :key=item.id class="col-10 col-sm-8 col-md-4 col-lg-3 content-card">
+              <div class="card-big-shadow">
+                  <div class="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
+                      <div class="content">
+                          <h4 class="petname">{{item.AnimalName}}</h4>
+                          <p class="description"><b>Type </b>{{item.AnimalType}} </p>
+                          <p class="description"><b>Breed </b>{{item.AnimalRace}} </p>
+                          <p class="description"><b>Age </b>{{item.AnimalAge}} </p>
+                          <BIconTrashFill class="delbtn" @click="removeitem(item)"/>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
     </div>
 </template>
 
 <script setup>
     import { ref, onMounted, watch, computed } from 'vue'
+    import { BIconTrashFill } from 'bootstrap-vue'
+
     const items = ref([])
     const inputAnimalName = ref()
     const inputAnimalType = ref()
@@ -63,7 +80,7 @@
     const inputAnimalAge = ref()
     const itemsAsc = computed(() => items.value.slice(0).sort((a,b) =>{
 	    return a.createdAt - b.createdAt
-    })) 
+    }))
     watch(items, (newVal) => {
         localStorage.setItem('items', JSON.stringify(newVal))
     }, {
@@ -90,3 +107,4 @@
 </script>
 
 <style src="./animal-form.css"></style>
+
