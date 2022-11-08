@@ -4,9 +4,9 @@
             <div class="col-12 col-sm-6 form-check">
                 <label class="shadow-lg">
                     <input
-                        type="radio" 
-                        name="category" 
                         id="category1"
+                        type="radio"
+                        name="category"
                         value="animal documentaries"
                         >
                     <span class="bubble business"></span>
@@ -20,28 +20,28 @@
             <div class="col-12 col-sm-6 form-check">
                 <label class="shadow-lg">
                     <input
-                        type="radio" 
-                        name="category" 
                         id="category2"
+                        type="radio"
+                        name="category"
                         value="funny animal videos"
                     >
                     <span class="bubble personal"></span>
                     <div class="catTitles">
                         <h4 class="CustomCat text-wrap">Funny</h4>
                     </div>
-                </label> 
+                </label>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-sm-6 formButton">
-                <button class="searchbtn shadow-lg" v-on:click="getVideos">Search</button>
+                <button class="searchbtn shadow-lg" @click="getVideos">Search</button>
             </div>
         </div>
-        
+
         <div class="row justify-content-center filtercontainer">
             <div class="col">
                 <label for="filter" class="form-label">Filter</label>
-                <select class="form-control" id="filter" v-model="selected">
+                <select id="filter" v-model="selected" class="form-control">
                     <option value="date" selected>Date</option>
                     <option value="rating">Rating</option>
                     <option value="relevance">Relevance</option>
@@ -52,16 +52,16 @@
             </div>
             <div class="col">
                 <label for="vidnum" class="form-label">Video n.</label>
-                <input type="number" id="vidnum" v-model="vNum" class="form-control vidnum" />
+                <input id="vidnum" v-model="vNum" type="number" class="form-control vidnum" />
             </div>
         </div>
-    
+
         <div class="row justify-content-center ytcards">
-            <div class="col-12 col-md-8 col-lg-3 card cardCustom" v-for="video in vlist" :key="video.id.videoId" >
-                <iframe 
+            <div v-for="video in vlist" :key="video.id.videoId" class="col-12 col-md-8 col-lg-3 card cardCustom" >
+                <iframe
                     class = "videoSize"
                     frameBorder="0"
-                    :src="'https://www.youtube.com/embed/'+video.id.videoId"  
+                    :src="'https://www.youtube.com/embed/'+video.id.videoId"
                     allowfullscreen
                     >
                 </iframe>

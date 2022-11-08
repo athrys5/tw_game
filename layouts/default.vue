@@ -3,17 +3,17 @@
     <div class="row justify-content-center">
         <div class="fix_1">
             <nav class="navbar">
-              <button 
+              <button
                 v-b-toggle.sidebar-no-header
                 class="btnNavbar"
               >
-                      <b-icon-list 
+                      <b-icon-list
                         style="color: #a53f3c;"
-                        font-scale="1.8" 
+                        font-scale="1.8"
                       ></b-icon-list>
               </button>
               <div class="sidebarcontent">
-                <b-sidebar 
+                <b-sidebar
                   id="sidebar-no-header"
                   aria-labelledby="sidebar-no-header-title"
                   no-header
@@ -48,13 +48,13 @@
                           </NuxtLink>
                         </ul>
                       </div>
-                      <div class="buttoncustom"> 
+                      <div class="buttoncustom">
                         <button class="button-2" @click="hide">Back</button>
                       </div>
                     </template>
                 </b-sidebar>
               </div>
-            </nav> 
+            </nav>
         </div>
     </div>
     <Nuxt />
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse} from 'bootstrap-vue' 
+import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse} from 'bootstrap-vue'
 
 export default {
   components: {
@@ -70,7 +70,7 @@ export default {
     BIconBook,
     BIconCollectionPlay,
     BIconJoystick,
-    BIconPencil, 
+    BIconPencil,
     BIconQuestionLg,
     BIconHouse,
   },

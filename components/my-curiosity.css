@@ -1,0 +1,44 @@
+.mycuriosity{
+  margin-top: 90px;
+}
+
+.petDropdown{
+  width: 50%;
+}
+
+.search{
+  border: 1px solid rgb(163, 162, 162);
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
+  padding: 8px;
+  color: rgb(163, 162, 162);
+  border-radius: 3px;
+}
+
+.search:hover{
+  background-color: rgb(218, 216, 216);
+}
+
+.search:active{
+  background-color: rgb(218, 216, 216);
+}
+
+.infocard{
+  border-radius: 0px;
+}
+
+.infocard .card-title{
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.infocard h4{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
+
+.infocard .card-text{
+  font-weight: 0;
+  font-family: 'Times New Roman', Times, serif;
+}

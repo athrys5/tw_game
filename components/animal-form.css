@@ -1,6 +1,6 @@
-.app{
+.pagecontainer{
 	margin-top: 90px;
-	padding: 0 !important;
+	padding: 0;
 }
 
 .pagetitle{
@@ -50,7 +50,6 @@
 }
 
 .card-big-shadow {
-    max-width: 320px;
     position: relative;
 }
 
@@ -121,7 +120,7 @@ h6, .h6 {
 	text-transform: capitalize;
 }
 .content-card{
-    margin-top:30px;    
+    margin-top:30px;
 }
 a:hover, a:focus {
     text-decoration: none;
@@ -135,4 +134,9 @@ a:hover, a:focus {
 }
 .card[data-color="yellow"] .category {
     color: #d88715;
+}
+
+.delbtn{
+  color: red;
+
 }
