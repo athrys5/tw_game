@@ -10,5 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<AnimalQuiz>` | `<animal-quiz>` (components/Animal-Quiz.vue)
 - `<CuriositaAnimali>` | `<curiosita-animali>` (components/Curiosita-Animali.vue)
 - `<HomePage>` | `<home-page>` (components/Home-Page.vue)
+- `<LoginForm>` | `<login-form>` (components/Login-Form.vue)
 - `<MyCuriosity>` | `<my-curiosity>` (components/my-curiosity.vue)
 - `<YoutubeVideo>` | `<youtube-video>` (components/youtube-video.vue)

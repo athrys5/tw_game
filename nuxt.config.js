@@ -36,6 +36,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/auth', 
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
@@ -58,4 +59,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  auth: {
+    redirect: false,
+  },
+
+  router: {
+    middleware: ['auth']
+  }
 }
