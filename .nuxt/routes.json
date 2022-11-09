@@ -21,6 +21,13 @@
     "_name": "_41fc6633"
   },
   {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_eba21bc6"
+  },
+  {
     "name": "videos",
     "path": "/videos",
     "component": "C:\\\\Users\\\\capri\\\\Desktop\\\\tw_game\\\\pages\\\\videos.vue",

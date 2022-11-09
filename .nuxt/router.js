@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _90d31a5a = () => interopDefault(import('..\\pages\\curiosities.vue' /* webpackChunkName: "pages/curiosities" */))
 const _2d60c975 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
 const _41fc6633 = () => interopDefault(import('..\\pages\\generalcuriosities.vue' /* webpackChunkName: "pages/generalcuriosities" */))
+const _eba21bc6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _71d1ae58 = () => interopDefault(import('..\\pages\\videos.vue' /* webpackChunkName: "pages/videos" */))
 const _58291b80 = () => interopDefault(import('..\\pages\\yourpet.vue' /* webpackChunkName: "pages/yourpet" */))
 const _7ef161f4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -34,6 +35,10 @@ export const routerOptions = {
     path: "/generalcuriosities",
     component: _41fc6633,
     name: "generalcuriosities"
+  }, {
+    path: "/login",
+    component: _eba21bc6,
+    name: "login"
   }, {
     path: "/videos",
     component: _71d1ae58,
