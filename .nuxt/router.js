@@ -4,13 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _90d31a5a = () => interopDefault(import('..\\pages\\curiosities.vue' /* webpackChunkName: "pages/curiosities" */))
-const _2d60c975 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
-const _41fc6633 = () => interopDefault(import('..\\pages\\generalcuriosities.vue' /* webpackChunkName: "pages/generalcuriosities" */))
-const _eba21bc6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _71d1ae58 = () => interopDefault(import('..\\pages\\videos.vue' /* webpackChunkName: "pages/videos" */))
-const _58291b80 = () => interopDefault(import('..\\pages\\yourpet.vue' /* webpackChunkName: "pages/yourpet" */))
-const _7ef161f4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _463f86da = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
+const _56ca6eac = () => interopDefault(import('..\\pages\\curiosities.vue' /* webpackChunkName: "pages/curiosities" */))
+const _5a5e47e4 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
+const _ef71d78c = () => interopDefault(import('..\\pages\\generalcuriosities.vue' /* webpackChunkName: "pages/generalcuriosities" */))
+const _2f9f04b6 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _60ad2d4a = () => interopDefault(import('..\\pages\\videos.vue' /* webpackChunkName: "pages/videos" */))
+const _44bd7ace = () => interopDefault(import('..\\pages\\yourpet.vue' /* webpackChunkName: "pages/yourpet" */))
+const _65f7619f = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,32 +25,36 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/about",
+    component: _463f86da,
+    name: "about"
+  }, {
     path: "/curiosities",
-    component: _90d31a5a,
+    component: _56ca6eac,
     name: "curiosities"
   }, {
     path: "/games",
-    component: _2d60c975,
+    component: _5a5e47e4,
     name: "games"
   }, {
     path: "/generalcuriosities",
-    component: _41fc6633,
+    component: _ef71d78c,
     name: "generalcuriosities"
   }, {
     path: "/login",
-    component: _eba21bc6,
+    component: _2f9f04b6,
     name: "login"
   }, {
     path: "/videos",
-    component: _71d1ae58,
+    component: _60ad2d4a,
     name: "videos"
   }, {
     path: "/yourpet",
-    component: _58291b80,
+    component: _44bd7ace,
     name: "yourpet"
   }, {
     path: "/",
-    component: _7ef161f4,
+    component: _65f7619f,
     name: "index"
   }],
 

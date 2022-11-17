@@ -28,6 +28,9 @@
        <section v-else class="showscore">
 			<h2>You have finished the quiz!</h2>
 			<p>Your score is {{score}}</p>
+            <div v-if="this.$store.getters.getIsLogged">
+                <button @click="saveScore" class="quizbtn">Save Score</button>
+            </div>
             <button @click="repeatQuiz" class="quizbtn">Repeat the Quiz</button>
 		</section>
     </div>
@@ -149,6 +152,18 @@
             },
             findCorrectIndex(field){
                 return field === this.animalforquiz[this.listofparameters[this.randparam]];
+            },
+            async saveScore(){
+                await fetch('api/score',{
+                    method: 'POST',
+                    body: JSON.stringify({
+                        score: this.score,
+                        email: this.$store.getters.getEmail,
+                        state: this.$store.getters.getState,
+                        user: this.$store.getters.getUserId,
+                    }),
+                    headers: {'Content-Type': 'application/json'},
+                })
             }
         }
     }
