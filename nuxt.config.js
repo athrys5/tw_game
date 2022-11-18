@@ -41,8 +41,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    '@nuxtjs/auth', 
+    '@nuxtjs/pwa', 
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '~/modules/mongodb-setup.js',
@@ -72,6 +71,5 @@ export default {
   },
 
   router: {
-    middleware: ['auth']
   }
 }

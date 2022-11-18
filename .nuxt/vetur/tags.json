@@ -11,9 +11,6 @@
   "HomePage": {
     "description": "Auto imported from components/Home-Page.vue"
   },
-  "LoginForm": {
-    "description": "Auto imported from components/Login-Form.vue"
-  },
   "MyCuriosity": {
     "description": "Auto imported from components/my-curiosity.vue"
   },

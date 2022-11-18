@@ -12,12 +12,6 @@
                         font-scale="1.8"
                       ></b-icon-list>
               </button>
-              <div v-if="$auth.loggedIn">
-                <NuxtLink to="/">Logout</NuxtLink>
-              </div>
-              <div v-else>
-                <NuxtLink to="/login">Login</NuxtLink>
-              </div>
               <div class="sidebarcontent">
                 <b-sidebar
                   id="sidebar-no-header"

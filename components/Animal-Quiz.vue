@@ -21,17 +21,17 @@
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
-            <button v-if="submitbutton" :disabled="!control" @click="checkAnswer" class="quizbtn">Submit</button>
-            <button v-if="!submitbutton" @click="getCuriosity" class="quizbtn">{{labelbutton}}</button>
+            <button  v-if="submitbutton" class="quizbtn" :disabled="!control" @click="checkAnswer">Submit</button>
+            <button  v-if="!submitbutton" class="quizbtn"  @click="getCuriosity" >{{labelbutton}}</button>
             </div>
        </section>
        <section v-else class="showscore">
 			<h2>You have finished the quiz!</h2>
 			<p>Your score is {{score}}</p>
-            <div v-if="this.$store.getters.getIsLogged">
-                <button @click="saveScore" class="quizbtn">Save Score</button>
+            <div v-if="this.$store.getters.getIsLogged && show">
+                <button class="quizbtn" @click="saveScore">Save & Repeat</button>
             </div>
-            <button @click="repeatQuiz" class="quizbtn">Repeat the Quiz</button>
+            <button class="quizbtn" @click="repeatQuiz">Repeat the Quiz</button>
 		</section>
     </div>
 </template>
@@ -59,6 +59,7 @@
                 repliesize: [],
                 listofparameters: ["latin_name", "length_min", "length_max", "weight_min", "weight_max", "lifespan", "habitat", "diet", "geo_range"],
                 listofparameters2: ["latin name", "minimum length (in meters)", "maximum length (in meters)", "minimum weight (in kilos)", "maximum weight (in kilos)", "lifespan", "habitat", "diet", "geo range"],
+                show: true,
             }
         },
         mounted() {
@@ -131,6 +132,7 @@
                 }
             },
             repeatQuiz(){
+                this.show = true;
                 this.quizfinished = false;
                 this.score = 0;
                 this.selectedIndex = null;
@@ -154,6 +156,7 @@
                 return field === this.animalforquiz[this.listofparameters[this.randparam]];
             },
             async saveScore(){
+                this.show = false;
                 await fetch('api/score',{
                     method: 'POST',
                     body: JSON.stringify({

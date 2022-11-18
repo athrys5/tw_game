@@ -41,6 +41,10 @@ body {
 	margin-top:10px;
 }
 
+.quizbtn:hover {
+	background-color:  #982e2f;
+}
+
 button:disabled {
 	opacity: 0.5;
 } 
