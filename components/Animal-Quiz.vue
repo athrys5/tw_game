@@ -154,10 +154,12 @@
             },
             saveScore(){
                 this.changeScore(this.score);
+                this.changeComeFromGame(true)
                 this.$router.push('/about');
             },
             ...mapMutations({
                 changeScore: 'changeScore',
+                changeComeFromGame: 'changeComeFromGame'
             }),
         }
     }

@@ -61,6 +61,7 @@ export default {
             })
         },
     },
+    middleware: 'auth'
 }
 </script>
 
