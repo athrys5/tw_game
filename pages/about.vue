@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <div v-if="!this.$store.getters.getIsLogged" style="margin-top: 90px;">
-            <nuxt-link to="/">Home</nuxt-link>
+    <div class="login">
+        <div class="borders" style="margin-top: 90px;">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input  id="exampleInputEmail1" v-model="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
@@ -10,23 +9,22 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input id="exampleInputPassword1" v-model="password" type="password" class="form-control" placeholder="Password">
             </div>
-            <button @click="checkLog">Submit</button>
+            <button class="subBtn" @click="checkLog">Login</button>
         </div>
-        <div v-if="this.$store.getters.getIsLogged" style="margin-top: 90px;">
-            <button @click="changeIsLogged()">LogOut</button>
-        </div>
-</div>
+        <p  class="failLab" v-show="failLog">
+            Login Failed
+        </p>
+    </div>
 </template>
 
 <script>
-
-import { mapMutations } from 'vuex'
 
 export default {
     data(){
             return{
                 email:'',
                 password:'',
+                failLog: false,
             }
     },
     methods: {
@@ -41,23 +39,29 @@ export default {
             }).then((res)=>{
                 return res.json();
             }).then((d)=>{
-                const em = d.data[0].email;
-                const st = d.data[0].state;
-                const id = d.data[0].userid;
                 if(d.data.length !== 0 ){
-                    this.changeIsLogged();
-                    this.changeEmail(em);
-                    this.changeUserId(id);
-                    this.changeState(st);
+                    this.failLog = false;
+                    const em = d.data[0].email;
+                    const st = d.data[0].state;
+                    const id = d.data[0].userid;
+                    fetch('api/score',{
+                        method: 'POST',
+                        body: JSON.stringify({
+                            score: this.$store.getters.getScore,
+                            email: em,
+                            state: st,
+                            user: id,
+                        }),
+                        headers: {'Content-Type': 'application/json'},
+                    }) 
+                    this.$router.push('/games')
+                } else {
+                    this.failLog = true;
                 }
             })
         },
-        ...mapMutations({
-            changeIsLogged: 'changeIsLogged',
-            changeEmail: 'changeEmail',
-            changeUserId: 'changeUserId',
-            changeState: 'changeState'
-        }), 
     },
 }
 </script>
+
+<style src="./about.css"></style>

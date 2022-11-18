@@ -14,29 +14,28 @@
                 >
                     <input 
                         v-model="control"
-						type="radio" 
-						name="some-radios" 
-						:value=item
-					/>
+                        type="radio" 
+                        name="some-radios" 
+                        :value=item
+                    />
                     {{item}}
                 </label>
             <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
             <button  v-if="submitbutton" class="quizbtn" :disabled="!control" @click="checkAnswer">Submit</button>
             <button  v-if="!submitbutton" class="quizbtn"  @click="getCuriosity" >{{labelbutton}}</button>
             </div>
-       </section>
-       <section v-else class="showscore">
-			<h2>You have finished the quiz!</h2>
-			<p>Your score is {{score}}</p>
-            <div v-if="this.$store.getters.getIsLogged && show">
-                <button class="quizbtn" @click="saveScore">Save & Repeat</button>
-            </div>
+        </section>
+        <section v-else class="showscore">
+            <h2>You have finished the quiz!</h2>
+            <p>Your score is {{score}}</p>
             <button class="quizbtn" @click="repeatQuiz">Repeat the Quiz</button>
-		</section>
+            <button class="quizbtn" @click="saveScore">Save Score</button>
+        </section>
     </div>
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
     const axios = require("axios");
     export default {
         data(){
@@ -59,7 +58,6 @@
                 repliesize: [],
                 listofparameters: ["latin_name", "length_min", "length_max", "weight_min", "weight_max", "lifespan", "habitat", "diet", "geo_range"],
                 listofparameters2: ["latin name", "minimum length (in meters)", "maximum length (in meters)", "minimum weight (in kilos)", "maximum weight (in kilos)", "lifespan", "habitat", "diet", "geo range"],
-                show: true,
             }
         },
         mounted() {
@@ -132,7 +130,6 @@
                 }
             },
             repeatQuiz(){
-                this.show = true;
                 this.quizfinished = false;
                 this.score = 0;
                 this.selectedIndex = null;
@@ -155,19 +152,13 @@
             findCorrectIndex(field){
                 return field === this.animalforquiz[this.listofparameters[this.randparam]];
             },
-            async saveScore(){
-                this.show = false;
-                await fetch('api/score',{
-                    method: 'POST',
-                    body: JSON.stringify({
-                        score: this.score,
-                        email: this.$store.getters.getEmail,
-                        state: this.$store.getters.getState,
-                        user: this.$store.getters.getUserId,
-                    }),
-                    headers: {'Content-Type': 'application/json'},
-                })
-            }
+            saveScore(){
+                this.changeScore(this.score);
+                this.$router.push('/about');
+            },
+            ...mapMutations({
+                changeScore: 'changeScore',
+            }),
         }
     }
 </script>

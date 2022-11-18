@@ -28,7 +28,7 @@ app.post('/score', async (req, res) =>{
         name: req.body.user,
         location: req.body.state,
         score: req.body.score,
-        dt: `${today.getMonth()}/${today.getDate()}/${today.getFullYear()}` ,
+        dt: `${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()}` ,
     }).toArray();
     res.json({data :JSON.parse(JSON.stringify(query))});
     } catch  { }
