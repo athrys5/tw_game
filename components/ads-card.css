@@ -6,8 +6,9 @@
 
 .sale {
     color: red;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
+    margin-left: 5px;
 }
 
 .label {
@@ -30,4 +31,8 @@
 .card-body {
     display: block;
     background-color: rgb(246, 241, 241);
+}
+
+.text {
+    display: flex;
 }

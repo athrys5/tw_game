@@ -6,8 +6,10 @@
             <img class="card-img-top" width="200" height="250" :src="array.img" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{array.name}}</h5>
-                <p class="card-text price">{{array.price}} $</p>
-                <p class="card-text sale">{{array.sale}} $</p>
+                <div class="card-text text">
+                    <p class="price">{{array.price}} $</p>
+                    <p class="sale">{{array.sale}} $</p>
+                </div>
             </div>
         </div>   
         </div> 
