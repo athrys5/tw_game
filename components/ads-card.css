@@ -1,0 +1,33 @@
+.price {
+    text-decoration:line-through;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sale {
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.label {
+    display: block;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 5px;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.card {
+    width: 300px;
+    height: 430px;
+    margin-left: 30px;
+}
+
+.card-body {
+    display: block;
+    background-color: rgb(246, 241, 241);
+}
