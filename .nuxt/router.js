@@ -8,6 +8,7 @@ const _463f86da = () => interopDefault(import('..\\pages\\about.vue' /* webpackC
 const _56ca6eac = () => interopDefault(import('..\\pages\\curiosities.vue' /* webpackChunkName: "pages/curiosities" */))
 const _5a5e47e4 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
 const _ef71d78c = () => interopDefault(import('..\\pages\\generalcuriosities.vue' /* webpackChunkName: "pages/generalcuriosities" */))
+const _1ef0ae40 = () => interopDefault(import('..\\pages\\vetinfo.vue' /* webpackChunkName: "pages/vetinfo" */))
 const _60ad2d4a = () => interopDefault(import('..\\pages\\videos.vue' /* webpackChunkName: "pages/videos" */))
 const _44bd7ace = () => interopDefault(import('..\\pages\\yourpet.vue' /* webpackChunkName: "pages/yourpet" */))
 const _65f7619f = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -39,6 +40,10 @@ export const routerOptions = {
     path: "/generalcuriosities",
     component: _ef71d78c,
     name: "generalcuriosities"
+  }, {
+    path: "/vetinfo",
+    component: _1ef0ae40,
+    name: "vetinfo"
   }, {
     path: "/videos",
     component: _60ad2d4a,

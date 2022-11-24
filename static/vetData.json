@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "title": "Canine Stomach Cancer: Symptoms, Treatments and Prognosis",
+            "introduction" : "Stomach cancer may not be one of the most common types of canine cancer, but it can be one of the most devastating. This cruel disease often shows no symptoms until it has already reached advanced stages and is more commonly seen in older dogs.",
+            "body": [
+                {
+                    "subtitle": "Risk Factors",
+                    "text": "The cause of stomach cancer in dogs is generally unknown, but there are some associated risk factors, including age, sex and breed. Both benign and malignant stomach tumors are more common in older dogs, particularly males around 9 years of age."
+                },
+                {
+                    "subtitle": "Types of Stomach Tumors in Dogs",
+                    "text": "There are a few different types of tumors that can grow within a dog’s stomach. These may be benign (non-cancerous) or malignant (cancerous) with chances of spreading to other parts of the body. When left untreated, both can continue to grow and interfere with stomach function, while also increasing the risk of tumor ulceration and gastric obstruction.Cases involving ulcerating tumors also run the risk of developing a stomach perforation, or a hole in the stomach, which can lead to a dangerous, sometimes life-threatening condition known as peritonitis."
+                },
+                {
+                    "subtitle": "Signs and Symptoms",
+                    "text": "Symptoms of stomach cancer in dogs usually develop gradually over weeks or months, with vomiting being the most common. This is often the first sign and it may appear blood-tinged or resemble coffee grounds as the condition progresses. This is due to ulcerating tumors, or tumors that break open and bleed. Black stools are also an indication of an ulcerated stomach tumor."
+                },
+                {
+                    "subtitle": "Treatment Options",
+                    "text": "Treatments for canine stomach cancer may involve surgery, chemotherapy, radiation, or a combination of treatments."
+                },
+                {
+                    "subtitle": "Prognosis: Life Expectancy for Dogs With Stomach Cancer",
+                    "text": "Unfortunately, the prognosis for dogs diagnosed with malignant stomach tumors is not positive, as in most cases, the cancer has already progressed to advanced stages.The most common tumor, gastric adenocarcinoma, carries a guarded prognosis as the cancer has often already begun to metastasize (spread to other parts) at the time of diagnosis. Overall survival times are commonly less than 6 months, with the possibility of the tumors growing back after treatment.Dogs with gastric leiomyosarcoma can potentially be cured with surgery alone, but survival rates are similar to those of gastric adenocarcinoma when diagnosed in the advanced stages."
+                }
+            ]
+        },
+        {
+            "title": "503B Compounding and the Future Of Veterinary Medicine",
+            "introduction": "Pharmaceutical compounding is a valuable and often misunderstood practice, steeped in history and tradition. Modern compounding—often referred to as 503A—is a niche business, providing patient-specific formulations to satisfy individual needs.Because commercially available drugs are marketed almost exclusively for humans, compounding has become an essential resource for veterinary medicine. Veterinarians often depend on 503A pharmacies to provide preparations at lower concentrations and in more palatable dosage forms to optimize treatment for their patients.",
+            "body":[
+                {
+                    "subtitle": "503A Compounding",
+                    "text": "However, without proper management and regulations, 503A compounding can potentially be detrimental. Presently, 503A pharmacies are not required to adhere to Current Good Manufacturing Practice (cGMP), objectives put forth by the Food and Drug Administration (FDA) to ensure that pharmaceuticals achieve a specified standard of safety. The quality of products produced in a 503A facility depend on the pharmacy’s voluntary conformance with cGMP, which can be substantially cost-prohibitive, requiring anywhere from $50,000 to $100,000+ of investment for a single formulation.Testing on raw materials and finished products may be performed to an extent depending on the facility, but the data are often incomplete, testing only one or two factors while omitting others that would affect the overall quality of the product. The variability of cGMP compliance from pharmacy to pharmacy paves the way for glaring omissions in procedures that can lead to patient harm."
+                },
+                {
+                    "subtitle": "How 503B is Different",
+                    "text": "From a clinician’s perspective, these facts left many unanswered questions regarding the quality of medication they receive. In 2013 the Drug Quality and Security Act was signed establishing a new set of standards for compounding pharmacies, called 503B. While it is voluntary to register as a 503B facility, a facility with this designation is required to conform to cGMP standards.Also, unlike 503A, 503B facilities can manufacture batches which can be sold without patient-specific prescriptions, known as “outsourcing.” Instead, they can be sold to healthcare facilities, who can subsequently retain them for office use. This added distribution capability is permitted by the FDA due to rigorous testing and controls from beginning to end of production."
+                },
+                {
+                    "subtitle": "Conclusion",
+                    "text": "Veterinarians must often find a balance when it comes to prescribing. Price and availability will always play major roles for their clients. Additionally, they may see the value in ordering a specifically formulated 3.125 mg capsule, despite lack of potency testing, when only 3 mg and 4 mg tablets are available from a 503B facility.These are concerns that can vary from clinician to clinician and from patient to patient. It is important that prescribers make informed judgments on the medication they receive to ensure the best possible patient outcomes. Veterinarians, more than ever before, can be assured that their order meets standards of safety and quality, if they know what to look for in a compounding pharmacy."
+                }
+            ]
+        }
+    ]    
+}

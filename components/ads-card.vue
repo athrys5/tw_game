@@ -1,0 +1,40 @@
+<template>
+    <div>
+        <div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{array.name}}</h5>
+                <p class="card-text">{{array.price}}</p>
+            </div>
+        </div>   
+        </div> 
+    </div>
+</template>
+
+<script>
+const axios = require("axios");
+export default {
+  data(){
+        return {
+            array: [],
+        }
+    },
+    mounted() {
+       this.getVetInfo();
+    },
+    methods:{
+         getVetInfo(){
+           axios.request({
+                method: 'GET',
+                url: '/ads.json',
+            }).then((response) => {
+               return response;
+            }).then((res)=>{
+                const maxlen = res.data.data.length;
+                const random = Math.floor(Math.random() * (maxlen - 0 + 1)) + 0;
+                this.array = res.data.data[random];
+            })
+        }
+    }
+}
+</script>

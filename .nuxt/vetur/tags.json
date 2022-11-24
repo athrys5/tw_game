@@ -1,6 +1,12 @@
 {
+  "AdsCard": {
+    "description": "Auto imported from components/ads-card.vue"
+  },
   "AnimalForm": {
     "description": "Auto imported from components/animal-form.vue"
+  },
+  "AnimalInfo": {
+    "description": "Auto imported from components/Animal-Info.vue"
   },
   "AnimalQuiz": {
     "description": "Auto imported from components/Animal-Quiz.vue"

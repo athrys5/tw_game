@@ -28,6 +28,13 @@
     "_name": "_ef71d78c"
   },
   {
+    "name": "vetinfo",
+    "path": "/vetinfo",
+    "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\vetinfo.vue",
+    "chunkName": "pages/vetinfo",
+    "_name": "_1ef0ae40"
+  },
+  {
     "name": "videos",
     "path": "/videos",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\videos.vue",

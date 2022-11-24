@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "name" : "Gabbia conigli roma",
+            "price": 43
+        },
+        {
+            "name" : "Tunnel Vimini Roditori",
+            "price": 20
+        },
+        {
+            "name" : "Gabbia criceti",
+            "price": 29
+        },
+        {
+            "name" : "Monge all breeds adult salmone e riso",
+            "price": 59
+        },
+        {
+            "name" : "Expecial sticks snack pollo",
+            "price": 1
+        },
+        {
+            "name" : "Expecial tartarughe gamberi",
+            "price": 11
+        },
+        {
+            "name" : "Frontline combo gatti",
+            "price": 31
+        },
+        {
+            "name" : "Advantage spot on gatto",
+            "price": 28
+        },
+        {
+            "name" : "Salviette dental cleaners",
+            "price": 7
+        }
+    ]
+}
