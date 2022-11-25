@@ -11,6 +11,9 @@
   "AnimalQuiz": {
     "description": "Auto imported from components/Animal-Quiz.vue"
   },
+  "BootCarousel": {
+    "description": "Auto imported from components/Boot-Carousel.vue"
+  },
   "CuriositaAnimali": {
     "description": "Auto imported from components/Curiosita-Animali.vue"
   },

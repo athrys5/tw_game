@@ -10,7 +10,7 @@
         <b-icon-search class="search" @click="getApi"></b-icon-search>
       </div>
       <div class="row justify-content-center">
-          <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%;">
+          <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%; height: 55rem;">
               <div class="card-body">
                   <h5 class="card-title">{{animal.name}}</h5>
                   <div class="card-text">
@@ -46,7 +46,14 @@
                       <b>Height: </b>{{animal.characteristics.height}} <br>
                   </div>
               </div>
+        </div>
       </div>
+      <div v-if="!click" class="row justify-content-center" style="display:flex; flex-wrap:wrap;">
+        <ads-card />
+        <ads-card />
+        <ads-card />
+        <ads-card />
+        <ads-card />
       </div>
     </div>
 </template>
@@ -63,6 +70,7 @@ export default{
             list: [],
             selected: "",
             qrace: "",
+            click: false,
         }
     },
     mounted(){
@@ -70,6 +78,7 @@ export default{
     },
     methods:{
         getApi(){
+            this.click = true;
             this.getRace();
             axios.request({
                 method: 'GET',

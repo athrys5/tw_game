@@ -66,6 +66,13 @@
               </div>
           </div>
         </div>
+        <div class="row justify-content-center" style="display:flex; flex-wrap:wrap; margin-top:10px;">
+            <ads-card />
+            <ads-card />
+            <ads-card />
+            <ads-card />
+            <ads-card />
+        </div>
     </div>
 </template>
 

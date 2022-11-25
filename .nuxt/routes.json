@@ -3,48 +3,56 @@
     "name": "about",
     "path": "/about",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\about.vue",
-    "chunkName": "pages/about"
+    "chunkName": "pages/about",
+    "_name": "_463f86da"
   },
   {
     "name": "curiosities",
     "path": "/curiosities",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\curiosities.vue",
-    "chunkName": "pages/curiosities"
+    "chunkName": "pages/curiosities",
+    "_name": "_56ca6eac"
   },
   {
     "name": "games",
     "path": "/games",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\games.vue",
-    "chunkName": "pages/games"
+    "chunkName": "pages/games",
+    "_name": "_5a5e47e4"
   },
   {
     "name": "generalcuriosities",
     "path": "/generalcuriosities",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\generalcuriosities.vue",
-    "chunkName": "pages/generalcuriosities"
+    "chunkName": "pages/generalcuriosities",
+    "_name": "_ef71d78c"
   },
   {
     "name": "vetinfo",
     "path": "/vetinfo",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\vetinfo.vue",
-    "chunkName": "pages/vetinfo"
+    "chunkName": "pages/vetinfo",
+    "_name": "_1ef0ae40"
   },
   {
     "name": "videos",
     "path": "/videos",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\videos.vue",
-    "chunkName": "pages/videos"
+    "chunkName": "pages/videos",
+    "_name": "_60ad2d4a"
   },
   {
     "name": "yourpet",
     "path": "/yourpet",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\yourpet.vue",
-    "chunkName": "pages/yourpet"
+    "chunkName": "pages/yourpet",
+    "_name": "_44bd7ace"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\twproject-game\\\\tw_game\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_65f7619f"
   }
 ]

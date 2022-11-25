@@ -36,7 +36,7 @@ export default {
                return response;
             }).then((res)=>{
                 const maxlen = res.data.data.length;
-                const random = Math.floor(Math.random() * (maxlen - 0 + 1)) + 0;
+                const random = Math.floor(Math.random() * maxlen);
                 this.array = res.data.data[random];
             })
         }

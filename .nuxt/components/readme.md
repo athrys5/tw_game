@@ -10,6 +10,7 @@ You can directly use them in pages and other components without the need to impo
 - `<AnimalForm>` | `<animal-form>` (components/animal-form.vue)
 - `<AnimalInfo>` | `<animal-info>` (components/Animal-Info.vue)
 - `<AnimalQuiz>` | `<animal-quiz>` (components/Animal-Quiz.vue)
+- `<BootCarousel>` | `<boot-carousel>` (components/Boot-Carousel.vue)
 - `<CuriositaAnimali>` | `<curiosita-animali>` (components/Curiosita-Animali.vue)
 - `<HomePage>` | `<home-page>` (components/Home-Page.vue)
 - `<MyCuriosity>` | `<my-curiosity>` (components/my-curiosity.vue)
