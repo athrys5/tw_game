@@ -10,7 +10,7 @@
         <b-icon-search class="search" @click="getApi"></b-icon-search>
       </div>
       <div class="row justify-content-center">
-          <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%; height: 55rem;">
+          <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%;">
               <div class="card-body">
                   <h5 class="card-title">{{animal.name}}</h5>
                   <div class="card-text">

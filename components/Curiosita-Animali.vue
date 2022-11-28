@@ -43,7 +43,7 @@
         },
         methods:{
             getCuriosity(){
-                axios.request({
+               axios.request({
                     method: 'GET',
                     url: 'https://zoo-animal-api.herokuapp.com/animals/rand/',
                 })

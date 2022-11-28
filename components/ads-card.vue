@@ -1,14 +1,14 @@
 <template>
     <div>
         <div>
-        <div class="card">
-            <p class="label">On Sale</p>
+        <div class="card adscard">
+            <p class="label adslabel">On Sale</p>
             <img class="card-img-top" width="200" height="250" :src="array.img" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body adsb">
                 <h5 class="card-title">{{array.name}}</h5>
-                <div class="card-text text">
-                    <p class="price">{{array.price}} $</p>
-                    <p class="sale">{{array.sale}} $</p>
+                <div class="card-text adst">
+                    <p class="adsprice">{{array.price}} $</p>
+                    <p class="adssale">{{array.sale}} $</p>
                 </div>
             </div>
         </div>   
