@@ -23,7 +23,6 @@
                     />
                     {{item}}
                 </label>
-            <!--<p>{{animalforquiz[listofparameters[randparam]]}}</p>-->  
             <button  v-if="submitbutton" class="quizbtn" :disabled="!control" @click="checkAnswer">Submit</button>
             <button  v-if="!submitbutton" class="quizbtn"  @click="getCuriosity" >{{labelbutton}}</button>
             </div>
@@ -34,6 +33,13 @@
             <button class="quizbtn" @click="repeatQuiz">Repeat the Quiz</button>
             <button class="quizbtn" @click="saveScore">Save Score</button>
         </section>
+        <div class="row justify-content-center" style="display:flex; flex-wrap:wrap;">
+            <ads-card />
+            <ads-card />
+            <ads-card />
+            <ads-card />
+            <ads-card />
+        </div>
     </div>
 </template>
 

@@ -21,8 +21,7 @@
                             <p>{{JSON.parse(JSON.stringify(sub.text))}}</p>
                         </div>
                     </div>
-                    <a v-show="checkHide==true" href="#" class="btn buttonhealth" @click="showInfo(index)">Show More</a>
-                    <a v-show="checkClick==true" href="#" class="btn buttonhealth" @click="hideInfo(index)">Show Less</a>
+                    <a v-if="currentlyShowing !== index" href="#" class="btn buttonhealth" @click="showInfo(index)">Show More</a>
                 </div>
             </div>
         </div>
@@ -36,7 +35,6 @@ export default {
         return {
             array: [],
             checkClick: false,
-            checkHide: true,
             currentlyShowing: null,
         }
     },
@@ -56,13 +54,8 @@ export default {
         },
         showInfo(index){
             this.checkClick = true;
-            this.checkHide = false;
             this.currentlyShowing = index;
         },
-        hideInfo(index){
-            this.checkHide = true;
-            this.checkClick = false;
-        }
     }
 }
 </script>
