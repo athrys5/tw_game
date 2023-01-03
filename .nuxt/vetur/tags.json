@@ -5,11 +5,11 @@
   "AnimalForm": {
     "description": "Auto imported from components/animal-form.vue"
   },
+  "AnimalGame": {
+    "description": "Auto imported from components/Animal-Game.vue"
+  },
   "AnimalInfo": {
     "description": "Auto imported from components/Animal-Info.vue"
-  },
-  "AnimalQuiz": {
-    "description": "Auto imported from components/Animal-Quiz.vue"
   },
   "BootCarousel": {
     "description": "Auto imported from components/Boot-Carousel.vue"

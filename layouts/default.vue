@@ -46,6 +46,9 @@
                           <NuxtLink to="/videos" style="text-decoration: none; color: inherit;">
                             <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
                           </NuxtLink>
+                          <NuxtLink to="/vetinfo" style="text-decoration: none; color: inherit;">
+                            <li><b-icon-heart style="margin-right: 5px"></b-icon-heart>Health Information</li>
+                          </NuxtLink>
                         </ul>
                       </div>
                       <div class="buttoncustom">
@@ -62,7 +65,7 @@
 </template>
 
 <script>
-import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse} from 'bootstrap-vue'
+import { BIconList, BIconBook, BIconCollectionPlay, BIconJoystick, BIconPencil, BIconQuestionLg, BIconHouse, BIconHeart} from 'bootstrap-vue'
 
 export default {
   components: {
@@ -73,6 +76,7 @@ export default {
     BIconPencil,
     BIconQuestionLg,
     BIconHouse,
+    BIconHeart,
   },
 }
 </script>

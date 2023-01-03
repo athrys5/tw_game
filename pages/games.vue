@@ -1,5 +1,5 @@
 <template>
-    <Animal-Quiz />
+    <Animal-Game/>
 </template>
 
 <script>

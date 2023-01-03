@@ -1,7 +1,7 @@
 export { default as AdsCard } from '../..\\components\\ads-card.vue'
 export { default as AnimalForm } from '../..\\components\\animal-form.vue'
+export { default as AnimalGame } from '../..\\components\\Animal-Game.vue'
 export { default as AnimalInfo } from '../..\\components\\Animal-Info.vue'
-export { default as AnimalQuiz } from '../..\\components\\Animal-Quiz.vue'
 export { default as BootCarousel } from '../..\\components\\Boot-Carousel.vue'
 export { default as CuriositaAnimali } from '../..\\components\\Curiosita-Animali.vue'
 export { default as HomePage } from '../..\\components\\Home-Page.vue'

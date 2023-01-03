@@ -7,6 +7,25 @@ body {
     padding: 0;
 }
 
+.labelInputComName {
+  font-size: 30px;
+  color: #14171A;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.labelNotValid {
+  font-size: 15px;
+  color: #FF4742;
+  text-transform: uppercase;
+}
+
+.inputComName {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
 .curiosity {
     text-align: center;
 }
@@ -40,7 +59,7 @@ body {
     padding: 0;
 }
 
-.curiositycard .card-text{
+.labelCommonName .curiositycard .card-text{
   font-weight: 0;
   color: #14171A;
   text-transform: capitalize;

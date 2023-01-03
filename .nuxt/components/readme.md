@@ -8,8 +8,8 @@ You can directly use them in pages and other components without the need to impo
 
 - `<AdsCard>` | `<ads-card>` (components/ads-card.vue)
 - `<AnimalForm>` | `<animal-form>` (components/animal-form.vue)
+- `<AnimalGame>` | `<animal-game>` (components/Animal-Game.vue)
 - `<AnimalInfo>` | `<animal-info>` (components/Animal-Info.vue)
-- `<AnimalQuiz>` | `<animal-quiz>` (components/Animal-Quiz.vue)
 - `<BootCarousel>` | `<boot-carousel>` (components/Boot-Carousel.vue)
 - `<CuriositaAnimali>` | `<curiosita-animali>` (components/Curiosita-Animali.vue)
 - `<HomePage>` | `<home-page>` (components/Home-Page.vue)

@@ -1,10 +1,30 @@
 <template>
-    <div style="margin-top:90px;">
+    <div class="container-fluid" style="margin-top:90px;">
+        <div class="row justify-content-center">
+          <span class="pagetitle">Some useful health information</span>
+        </div>
         <div
             v-for="(el,index) in array"
             :key="index"
         >
-            {{JSON.parse(JSON.stringify(el.title))}}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title healthtitle">{{JSON.parse(JSON.stringify(el.title))}}</h5>
+                    <p class="card-text">{{JSON.parse(JSON.stringify(el.introduction))}}</p>
+                    <div v-if="currentlyShowing === index">
+                        <div 
+                            v-for="(sub,id) in el.body"
+                            v-show="checkClick"
+                            :key="id"
+                        >
+                            <p class="subtitlehealth">{{JSON.parse(JSON.stringify(sub.subtitle))}}</p>
+                            <p>{{JSON.parse(JSON.stringify(sub.text))}}</p>
+                        </div>
+                    </div>
+                    <a v-show="checkHide==true" href="#" class="btn buttonhealth" @click="showInfo(index)">Show More</a>
+                    <a v-show="checkClick==true" href="#" class="btn buttonhealth" @click="hideInfo(index)">Show Less</a>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -15,6 +35,9 @@ export default {
     data(){
         return {
             array: [],
+            checkClick: false,
+            checkHide: true,
+            currentlyShowing: null,
         }
     },
     mounted() {
@@ -30,7 +53,17 @@ export default {
             }).then((res)=>{
                 this.array = res.data.data;
             })
+        },
+        showInfo(index){
+            this.checkClick = true;
+            this.checkHide = false;
+            this.currentlyShowing = index;
+        },
+        hideInfo(index){
+            this.checkHide = true;
+            this.checkClick = false;
         }
     }
 }
 </script>
+<style src="./Animal-Info.css"></style>
