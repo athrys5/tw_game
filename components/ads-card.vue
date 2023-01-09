@@ -2,8 +2,8 @@
     <div>
         <div>
         <div class="card adscard">
-            <p class="label adslabel">On Sale</p>
-            <img class="card-img-top" width="200" height="250" :src="array.img" alt="Card image cap">
+            <p class="label adslabel" lang="en">On Sale</p>
+            <img class="card-img-top" width="200" height="250" :src="array.img" alt="Card Image about product advertisement">
             <div class="card-body adsb">
                 <h5 class="card-title">{{array.name}}</h5>
                 <div class="card-text adst">

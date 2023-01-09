@@ -29,25 +29,25 @@
                       <div class="activities">
                         <ul style="padding: 0;">
                           <NuxtLink to="/" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
+                            <li lang="en"><b-icon-house style="margin-right: 5px"></b-icon-house>Home</li>
                           </NuxtLink>
                           <NuxtLink to="/yourpet" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
+                            <li lang="en"><b-icon-pencil style="margin-right: 5px"></b-icon-pencil>Your Friends!</li>
                           </NuxtLink>
                           <NuxtLink to="/curiosities" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
+                            <li lang="en"><b-icon-book style="margin-right: 5px"></b-icon-book>Curiosities on your Animals</li>
                           </NuxtLink>
                           <NuxtLink to="/generalcuriosities" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
+                            <li lang="en"><b-icon-question-lg style="margin-right: 5px"></b-icon-question-lg>General Curiosities</li>
                           </NuxtLink>
                           <NuxtLink to="/games" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
+                            <li lang="en"><b-icon-joystick style="margin-right: 5px"></b-icon-joystick>Games</li>
                           </NuxtLink>
                           <NuxtLink to="/videos" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
+                            <li lang="en"><b-icon-collection-play style="margin-right: 5px"></b-icon-collection-play>Videos</li>
                           </NuxtLink>
                           <NuxtLink to="/vetinfo" style="text-decoration: none; color: inherit;">
-                            <li><b-icon-heart style="margin-right: 5px"></b-icon-heart>Health Information</li>
+                            <li lang="en"><b-icon-heart style="margin-right: 5px"></b-icon-heart>Health Information</li>
                           </NuxtLink>
                         </ul>
                       </div>

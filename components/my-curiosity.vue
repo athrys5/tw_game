@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid mycuriosity">
       <div class="row justify-content-center">
-        <span class="pagetitle">Curiosities about your Pets</span>
+        <span class="pagetitle" lang="en">Curiosities about your Pets</span>
       </div>
       <div class="row justify-content-center" style="margin-bottom: 2rem;">
-        <select id="select" v-model="selected" class="form-control petDropdown">
+        <select id="select" v-model="selected" class="form-control petDropdown" aria-label="Select one of the inserted animals">
             <option v-for="item in alist" :key=item.id :value="item.AnimalName">{{item.AnimalName}}</option>
         </select>
         <b-icon-search class="search" @click="getApi"></b-icon-search>
@@ -13,7 +13,7 @@
           <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%;">
               <div class="card-body">
                   <h5 class="card-title">{{animal.name}}</h5>
-                  <div class="card-text">
+                  <div class="card-text" lang="en">
                       <h4>Taxonomy:</h4>
                       <b>Kingdom: </b>{{animal.taxonomy.kingdom}} <br>
                       <b>Phylum: </b>{{animal.taxonomy.phylum}} <br>

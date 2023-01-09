@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid curiositycontainer">
         <div class="row justify-content-center">
-          <span class="pagetitle">Did You Know?</span>
+          <span class="pagetitle" lang="en">Did You Know?</span>
         </div>
         <div class="row justify-content-center"> 
-            <p class="labelInputComName">Please insert an animal's common name</p>
+            <p class="labelInputComName" lang="en">Please insert an animal's common name</p>
         </div>
         <div class="row justify-content-center">
             <input v-model="commoname" type="text" class="inputComName">
@@ -13,23 +13,23 @@
             <div class="col-sm-12 col-md-8 col-lg-6 card curiositycard">
                 <!-- <img class="card-img-top" :src="list.image_link" alt="Card image cap"> -->
                 <div class="card-body">
-                    <h5 class="card-title">THE {{list.name}}'S</h5>
+                    <h3 class="card-title" lang="en">THE {{list.name}}'S</h3>
                     <div class="card-text">
-                        <h4>Taxonomy</h4>
-                        <p v-for="(ta,index) in list.taxonomy" :key=index>{{index}}: {{ta}}</p>
+                        <h4 lang="eg">Taxonomy</h4>
+                        <p v-for="(ta,index) in list.taxonomy" :key=index lang="en">{{index}}: {{ta}}</p>
                         <h4>Characteristics</h4>
-                        <p v-for="(cha,index) in list.characteristics" :key=index>{{index}}: {{cha}}</p>
+                        <p v-for="(cha,index) in list.characteristics" :key=index lang="en">{{index}}: {{cha}}</p>
                         <h4>Locations</h4>
-                        <p v-for="(loc,index) in list.locations" :key=index>{{loc}}</p>
+                        <p v-for="(loc,index) in list.locations" :key=index lang="en">{{loc}}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div v-if="list == undefined" class="row justify-content-center"> 
-            <p class="labelNotValid">Name not valid</p>
+            <p class="labelNotValid" lang="en">Name not valid</p>
         </div>
         <div class="row justify-content-center">
-          <button class="btnCuriosity" @click="getCuriosity">Load another animal</button>
+          <button class="btnCuriosity" @click="getCuriosity" lang="en">Load another animal</button>
         </div>
     </div>
 </template>

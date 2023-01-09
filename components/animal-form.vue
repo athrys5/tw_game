@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid pagecontainer">
       <div class="row justify-content-center">
-        <span class="pagetitle">Describe your Pets</span>
+        <span class="pagetitle" lang="eg">Describe your Pets</span>
       </div>
       <div class="row justify-content-center">
         <div class="subpetdiv col-12 col-md-6">
@@ -13,6 +13,7 @@
                             v-model="inputAnimalName"
                             type="text"
                             name="AnimalName"
+                            aria-label="Animal Name"
                             placeholder="Name" />
                     </div>
                     <div class="col-12">
@@ -21,6 +22,7 @@
                         v-model="inputAnimalType"
                         type="text"
                         name="AnimalType"
+                        aria-label="Animal type"
                         placeholder="Type" />
                     </div>
                     <div class="col-12">
@@ -29,6 +31,7 @@
                             v-model="inputAnimalRace"
                             type="text"
                             name="AnimalRace"
+                            aria-label="Animal Race"
                             placeholder="Breed" />
                     </div>
                     <div class="col-12">
@@ -37,13 +40,14 @@
                             v-model="inputAnimalAge"
                             type="number"
                             name="AnimalAge"
+                            aria-label="Aniaml Age"
                             placeholder="Age" />
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btnNavbar h4" value="Add item">Add Pet</button>
                     </div>
                     <div class="col-12">
-                      <small class="form-text text-muted">
+                      <small class="form-text text-muted" lang="eg">
                         Be accurate describing your friend to find out curiosities!
                       </small>
                     </div>

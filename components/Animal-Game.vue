@@ -1,11 +1,11 @@
 <template>
     <div class="app">
         <div class="row justify-content-center">
-          <span class="pagetitle">Try our Quiz!</span>
+          <span class="pagetitle" lang="en">Try our Quiz!</span>
         </div>
         <section v-if="!quizfinished" class="quiz">
             <div class="quiz-info">
-                <span class="question">Which is {{animalforquiz.name}} {{question}} ?</span>
+                <span class="question" lang="en">Which is {{animalforquiz.name}} {{question}} ?</span>
             </div>
             <div class="options">
                 <label 
@@ -13,12 +13,13 @@
                     :id="answerId(index)" 
                     :key="index"
                     class="option"
+                    lang="en"
                     @click="selectAnswer(index)"
                 >
                     <input 
                         v-model="control"
                         type="radio" 
-                        name="some-radios" 
+                        name="some-radios"
                         :value=item
                     />
                     {{item}}
@@ -28,8 +29,8 @@
             </div>
         </section>
         <section v-else class="showscore">
-            <h2>You have finished the quiz!</h2>
-            <p>Your score is {{score}}</p>
+            <h2 lang="en">You have finished the quiz!</h2>
+            <p lang="en">Your score is {{score}}</p>
             <button class="quizbtn" @click="repeatQuiz">Repeat the Quiz</button>
             <button class="quizbtn" @click="saveScore">Save Score</button>
         </section>

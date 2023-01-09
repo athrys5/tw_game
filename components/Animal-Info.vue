@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid" style="margin-top:90px;">
         <div class="row justify-content-center">
-          <span class="pagetitle">Some useful health information</span>
+          <span class="pagetitle" lang="en">Some useful health information</span>
         </div>
         <div
             v-for="(el,index) in array"
@@ -9,16 +9,16 @@
         >
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title healthtitle">{{JSON.parse(JSON.stringify(el.title))}}</h5>
-                    <p class="card-text">{{JSON.parse(JSON.stringify(el.introduction))}}</p>
+                    <h5 class="card-title healthtitle" lang="en">{{JSON.parse(JSON.stringify(el.title))}}</h5>
+                    <p class="card-text" lang="en">{{JSON.parse(JSON.stringify(el.introduction))}}</p>
                     <div v-if="currentlyShowing === index">
                         <div 
                             v-for="(sub,id) in el.body"
                             v-show="checkClick"
                             :key="id"
                         >
-                            <p class="subtitlehealth">{{JSON.parse(JSON.stringify(sub.subtitle))}}</p>
-                            <p>{{JSON.parse(JSON.stringify(sub.text))}}</p>
+                            <p class="subtitlehealth" lang="en">{{JSON.parse(JSON.stringify(sub.subtitle))}}</p>
+                            <p lang="en">{{JSON.parse(JSON.stringify(sub.text))}}</p>
                         </div>
                     </div>
                     <a v-if="currentlyShowing !== index" href="#" class="btn buttonhealth" @click="showInfo(index)">Show More</a>

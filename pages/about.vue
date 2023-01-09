@@ -2,16 +2,16 @@
     <div class="login">
         <div class="borders" style="margin-top: 90px;">
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input  id="exampleInputEmail1" v-model="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                <label for="InputEmail1" lang="en">Email address</label>
+                <input  id="InputEmail1" v-model="email" type="email" class="form-control" placeholder="Enter email">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input id="exampleInputPassword1" v-model="password" type="password" class="form-control" placeholder="Password">
+                <label for="InputPassword1" lang="en">Password</label>
+                <input id="InputPassword1" v-model="password" type="password" class="form-control" placeholder="Password">
             </div>
             <button class="subBtn" @click="checkLog">Login</button>
         </div>
-        <p  class="failLab" v-show="failLog">
+        <p  v-show="failLog" class="failLab" lang="en">
             Login Failed
         </p>
     </div>

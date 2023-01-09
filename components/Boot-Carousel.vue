@@ -14,26 +14,26 @@
       @sliding-end="onSlideEnd"
     >
 
-      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/6640383/pexels-photo-6640383.jpeg?auto=compress&cs=tinysrgb&w=600">
-        <p>
+      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/6640383/pexels-photo-6640383.jpeg?auto=compress&cs=tinysrgb&w=600" img-alt="">
+        <p lang="en">
           Discover our products and services, come and visit us!
         </p>
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/11169668/pexels-photo-11169668.jpeg?auto=compress&cs=tinysrgb&w=600">
-        <p>
+      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/11169668/pexels-photo-11169668.jpeg?auto=compress&cs=tinysrgb&w=600" img-alt="">
+        <p lang="en">
           Become a Vip user and discover the advantages!
         </p>
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/12505898/pexels-photo-12505898.jpeg?auto=compress&cs=tinysrgb&w=600">
-        <p>
+      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/12505898/pexels-photo-12505898.jpeg?auto=compress&cs=tinysrgb&w=600" img-alt="">
+        <p lang="en">
           Try our Dog Sitter service!
         </p>
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/3699268/pexels-photo-3699268.jpeg?auto=compress&cs=tinysrgb&w=600">
-        <p>
+      <b-carousel-slide caption="Front Office Site" img-src="https://images.pexels.com/photos/3699268/pexels-photo-3699268.jpeg?auto=compress&cs=tinysrgb&w=600" img-alt="">
+        <p lang="en">
           Try our Veterinarian service!
         </p>
       </b-carousel-slide>
