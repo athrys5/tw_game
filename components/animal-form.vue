@@ -75,7 +75,6 @@
             <ads-card />
             <ads-card />
             <ads-card />
-            <ads-card />
         </div>
     </div>
 </template>

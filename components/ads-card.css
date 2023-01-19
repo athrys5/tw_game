@@ -1,10 +1,4 @@
 .adsprice {
-    text-decoration:line-through;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.adssale {
     color: red;
     font-size: 30px;
     font-weight: 500;
@@ -18,7 +12,7 @@
     border-radius: 30px;
     text-align: center;
     margin-top: 5px;
-    width: 60px;
+    width: auto;
     margin-left: 10px;
 }
 

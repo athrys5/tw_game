@@ -21,7 +21,7 @@
                             <p lang="en">{{JSON.parse(JSON.stringify(sub.text))}}</p>
                         </div>
                     </div>
-                    <a v-if="currentlyShowing !== index" href="#" class="btn buttonhealth" @click="showInfo(index)">Show More</a>
+                    <a v-if="currentlyShowing !== index" class="btn buttonhealth" @click="showInfo(index)" role="button">Show More</a>
                 </div>
             </div>
         </div>
