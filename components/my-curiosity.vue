@@ -9,6 +9,9 @@
         </select>
         <b-icon-search class="search" @click="getApi"></b-icon-search>
       </div>
+      <div v-if="list.length == 0 && click" class="row justify-content-center"> 
+        <p>No Results</p>
+      </div> 
       <div class="row justify-content-center">
           <div v-for="animal in list" :key=animal.id class="card shadow-lg col-12 col-md-6 col-lg-4 infocard" style="width: 100%;">
               <div class="card-body">
