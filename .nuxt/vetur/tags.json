@@ -1,9 +1,18 @@
 {
+  "AdsCard": {
+    "description": "Auto imported from components/ads-card.vue"
+  },
   "AnimalForm": {
     "description": "Auto imported from components/animal-form.vue"
   },
-  "AnimalQuiz": {
-    "description": "Auto imported from components/Animal-Quiz.vue"
+  "AnimalGame": {
+    "description": "Auto imported from components/Animal-Game.vue"
+  },
+  "AnimalInfo": {
+    "description": "Auto imported from components/Animal-Info.vue"
+  },
+  "BootCarousel": {
+    "description": "Auto imported from components/Boot-Carousel.vue"
   },
   "CuriositaAnimali": {
     "description": "Auto imported from components/Curiosita-Animali.vue"

@@ -1,0 +1,38 @@
+.login {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+	height: 100vh;
+	margin-top: 90px;
+}
+
+.borders {
+    background-color: #FFF;
+	padding: 1rem;
+	width: 100%;
+	max-width: 640px;
+    border-radius: 1rem;
+}
+
+.subBtn {
+    appearance: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	background-color: #ff4548;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+}
+
+.subBtn:hover {
+    background-color:  #982e2f;
+}
+
+.failLab {
+    margin-top: 10px;
+}

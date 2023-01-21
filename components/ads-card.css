@@ -1,0 +1,32 @@
+.adsprice {
+    color: red;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.adslabel {
+    display: block;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 5px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.adscard {
+    width: 300px;
+    height: 430px;
+    margin: 20px 10px 10px 10px;
+}
+
+.adsb {
+    display: block;
+    background-color: rgb(246, 241, 241);
+}
+
+.adst {
+    display: flex;
+}

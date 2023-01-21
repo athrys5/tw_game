@@ -11,7 +11,7 @@
                         >
                     <span class="bubble business"></span>
                     <div class="catTitles">
-                        <h4 class="CustomCat">Documentaries</h4>
+                        <h4 class="CustomCat" lang="en">Documentaries</h4>
                     </div>
                 </label>
             </div>
@@ -27,7 +27,7 @@
                     >
                     <span class="bubble personal"></span>
                     <div class="catTitles">
-                        <h4 class="CustomCat text-wrap">Funny</h4>
+                        <h4 class="CustomCat text-wrap" lang="en">Funny</h4>
                     </div>
                 </label>
             </div>

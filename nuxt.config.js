@@ -11,11 +11,17 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js'},
+  ],
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/api-client.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,9 +41,10 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    '@nuxtjs/pwa', 
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '~/modules/mongodb-setup.js',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -58,4 +65,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  auth: {
+    redirect: false,
+  },
+
+  router: {
+  }
 }
